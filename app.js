@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with RYUKYU BEACH CLUB)
+// Okinawa Travel Assistant - Application Logic (Updated with CAMEL SANDWICH & SMOOTHIE Day 2 Breakfast)
 // ==========================================================================
 
 const itineraryData = {
@@ -18,11 +18,12 @@ const itineraryData = {
     ]
   },
   day2: {
-    title: "Day 2 (9/4 週五)：美麗海水族館 ➔ 古宇利島 ➔ 百年古家大家",
-    theme: "☕ 上午：BEB5晨間手沖 ＆ ☕ 下午：古宇利海景咖啡 ＆ 🐋 美麗海水族館",
+    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ ☕ 古宇利島海景咖啡 ➔ 百年古家大家",
+    theme: "🥪 ☕ 上午：CAMEL 現做三明治/果昔/晨咖啡 ＆ 🐋 美麗海水族館 ＆ ☕ 下午：古宇利海景咖啡",
     timeline: [
-      { time: "08:30 - 09:30", title: "☕ 上午咖啡：BEB5 瀨良垣 24h TAMARIBA 晨間咖啡", desc: "在 BEB5 享用精緻早餐盤，搭配中庭現煮精緻晨咖啡，補足精神後出發前往北部。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約50分", type: "drive"}] },
-      { time: "10:30 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "觀賞「黑潮之海」巨大水槽內的鯨鯊與鬼蝠魟！11:30 免費觀賞【OKICHAN 海豚秀】。館內海景餐廳 Inoh 享用午餐。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🍱 園內午餐", type: "food"}] },
+      { time: "08:15 - 09:00", title: "BEB5 出發 ➔ 駛往本部町 (車程約 45 分鐘)", desc: "全家從小搭乘 Alphard 出發，沿美麗海岸線駛往水族館前方的本部町。", tags: [{text: "🚗 車程: 約45分", type: "drive"}] },
+      { time: "09:00 - 10:00", title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE", desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！品嚐現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與香醇晨間冰拿鐵！小孩愛喝果昔、大人享用美味三明治與咖啡。", tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}] },
+      { time: "10:15 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "距 CAMEL 僅 10 分鐘！觀賞「黑潮之海」巨大水槽內的鯨鯊與鬼蝠魟！11:30 免費觀賞【OKICHAN 海豚秀】。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🐬 11:30海豚秀", type: "kid"}] },
       { time: "14:30 - 16:30", title: "☕ 下午咖啡：古宇利島海景咖啡 (Kouri Shrimp / L Lota)", desc: "駛過跨越藍綠色大海的古宇利大橋，造訪【心形岩】沙灘踩水。於海景咖啡廳品嚐冰美式/手沖與蝦蝦飯。", tags: [{text: "☕ 古宇利海景咖啡", type: "food"}, {text: "🏖️ 沙灘踩水", type: "kid"}] },
       { time: "17:30 - 19:30", title: "晚餐：名護 百年古家 大家 (Ufuya)", desc: "置身於 100 年歷史琉球古民家與庭園瀑布造景中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}] }
     ]
@@ -78,6 +79,7 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。" },
