@@ -1,26 +1,27 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Mame Pole Pole Coffee & Daily Morning/Afternoon Coffee)
+// Okinawa Travel Assistant - Application Logic (Updated with 9/3 17:00 Ryukyu no Ushi Chatan Booking #MR3Q6W)
 // ==========================================================================
 
 const itineraryData = {
   day1: {
-    title: "Day 1 (9/3 週四)：華航 CI 120 抵達 ➔ 領取 8人座油電 Alphard ➔ PARCO CITY (A&W) ➔ ☕ 港川 Cerrado Coffee ➔ BEB5 入住",
-    theme: "✈️ 10:45 抵達沖繩 ➔ 領取 8人座油電 Alphard ➔ ☕ 下午：Cerrado 港川外人住宅手沖咖啡",
+    title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W) ➔ ☕ 港川 Cerrado Coffee ➔ 🥩 17:00 琉球之牛(北谷店) ➔ BEB5 Check-in",
+    theme: "✈️ 10:45 抵達沖繩 ➔ ☕ 下午：Cerrado 港川外人住宅手沖 ➔ 🥩 17:00 琉球之牛(北谷店 #MR3Q6W) ➔ BEB5 入住",
     timeline: [
       { time: "08:15 - 10:45", title: "搭乘華航 CI 120 班機 (TPE ➔ OKA)", desc: "桃園機場第一航廈起飛，10:45 準時抵達沖繩那霸機場 (OKA)。", tags: [{text: "✈️ 華航 CI 120", type: "drive"}] },
       { time: "10:45 - 12:00", title: "辦理入境、提領行李 & 領取 8人座油電 Alphard", desc: "提領行李，搭乘接駁車至 Toyota Rent a Car 領取 8人座油電 Alphard（2+3+3 配置）。7 位成員坐滿 7 個位置，第3排可單邊折疊收收（50/50分折），擺放 3~4 個大行李箱與推車。", tags: [{text: "🚗 領取8人座油電Alphard", type: "drive"}, {text: "✨ 3排可單邊收折放置行李", type: "kid"}] },
       { time: "12:20 - 14:30", title: "☕ 上午咖啡＆美食：SAN-A PARCO CITY ＆ 【指定美食】A&W 漢堡", desc: "距機場僅 20 分鐘車程！於無敵海景美食街享用【A&W 美式漢堡】與特調晨間冰咖啡。大人逛商場、小孩看海。", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ 晨間咖啡", type: "food"}] },
-      { time: "14:35 - 15:30", title: "☕ 下午咖啡＆買豆：【OKINAWA CERRADO COFFEE】@ 港川外人住宅街", desc: "距離 PARCO CITY 僅 5 分鐘！造訪 1986 年創立老字號烘豆廠【Cerrado Coffee】，品嚐精緻單品手沖並採購特製濾掛包與咖啡豆。順道品嚐 oHacorté 手工水果塔！", tags: [{text: "☕ Cerrado手沖咖啡", type: "food"}, {text: "🛍️ 買咖啡豆/濾掛", type: "food"}] },
-      { time: "15:30 - 16:30", title: "駕駛 Alphard 油電休旅前往星野 BEB5 沖繩瀨良垣 Check-in", desc: "行經沖繩自動車道前往恩納村。油電混合動力安靜順暢，辦理 BEB5 入住手續，開箱極具質感家庭套房。", tags: [{text: "🚗 車程: 約45分", type: "drive"}, {text: "🏨 前4晚住宿據點", type: "drive"}] },
-      { time: "16:30 - 18:30", title: "BEB5 飯店設施放鬆 & 戶外泳池", desc: "在 24h TAMARIBA 中庭 lounge 喝免費咖啡，帶小朋友至戶外溫水泳池戲水放電。", tags: [{text: "🏊 溫水泳池", type: "kid"}, {text: "☕ TAMARIBA免費咖啡", type: "food"}] },
-      { time: "18:30 - 20:30", title: "晚餐：恩納村燒肉 (琉球之牛 / 燒肉海心)", desc: "品嚐頂級沖繩阿古豬 (Agu Pork) 與 A5 沖繩和牛燒肉，為沖繩之旅揭開美味序幕。（建議提早預約）", tags: [{text: "🥩 A5和牛燒肉", type: "food"}] }
+      { time: "14:35 - 15:45", title: "☕ 下午咖啡＆買豆：【OKINAWA CERRADO COFFEE】@ 港川外人住宅街", desc: "距離 PARCO CITY 僅 5 分鐘！造訪 1986 年創立老字號烘豆廠【Cerrado Coffee】，品嚐精緻單品手沖並採購特製濾掛包與咖啡豆。順道品嚐 oHacorté 手工水果塔！", tags: [{text: "☕ Cerrado手沖咖啡", type: "food"}, {text: "🛍️ 買咖啡豆/濾掛", type: "food"}] },
+      { time: "15:45 - 16:45", title: "駛往北谷美濱區域（美國村周邊）", desc: "沿國道 58 號海岸線駛往北谷，欣賞沖繩西海岸海景，預備前往晚餐地點。（車程約 25 分鐘）", tags: [{text: "🚗 車程: 約25分", type: "drive"}] },
+      { time: "17:00 - 19:00", title: "🥩 晚餐：【琉球之牛 北谷店】已預約成功！(Confirmation # MR3Q6W)", desc: "【已訂位 17:00】品嚐頂級 A5 沖繩縣產黑毛和牛燒肉套餐與必點鎮店【炙燒和牛壽司】！全家 5大2小 享受極致美味和牛盛宴。", tags: [{text: "🥩 琉球之牛(北谷店)", type: "food"}, {text: "✅ 預約號#MR3Q6W", type: "food"}] },
+      { time: "19:15 - 20:15", title: "晚餐後駛往恩納村【星野 BEB5 沖繩瀨良垣】辦理 Check-in", desc: "享用完極品燒肉大餐後，駕駛 Alphard 輕鬆行經國道出發前往恩納村。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
+      { time: "20:15 - 21:30", title: "🏨 星野 BEB5 沖繩瀨良垣 Check-in 入住 ＆ 開箱家庭套房", desc: "辦理 BEB5 入住手續，卸下行李。在 24h TAMARIBA 中庭 Lounge 喝杯晚間咖啡/啤酒放鬆，早點休息迎接明日行程！", tags: [{text: "🏨 前4晚住宿據點", type: "drive"}, {text: "☕ TAMARIBA晚間咖啡", type: "food"}] }
     ]
   },
   day2: {
     title: "Day 2 (9/4 週五)：美麗海水族館 ➔ 古宇利島 ➔ 百年古家大家",
     theme: "☕ 上午：BEB5晨間手沖 ＆ ☕ 下午：古宇利海景咖啡 ＆ 🐋 美麗海水族館",
     timeline: [
-      { time: "08:30 - 09:30", title: "☕ 上午咖啡：BEB5 瀨良垣 24h TAMARIBA 晨間咖啡", desc: "在 BEB5 享用精緻早餐盤，搭配 TAMARIBA 中庭現煮精緻晨間咖啡，補足精神後出發前往北部。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約50分", type: "drive"}] },
+      { time: "08:30 - 09:30", title: "☕ 上午咖啡：BEB5 瀨良垣 24h TAMARIBA 晨間咖啡", desc: "在 BEB5 享用精緻早餐盤，搭配中庭現煮精緻晨咖啡，補足精神後出發前往北部。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約50分", type: "drive"}] },
       { time: "10:30 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "觀賞「黑潮之海」巨大水槽內的鯨鯊與鬼蝠魟！11:30 免費觀賞【OKICHAN 海豚秀】。館內海景餐廳 Inoh 享用午餐。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🍱 園內午餐", type: "food"}] },
       { time: "14:30 - 16:30", title: "☕ 下午咖啡：古宇利島海景咖啡 (Kouri Shrimp / L Lota)", desc: "駛過跨越藍綠色大海的古宇利大橋，造訪【心形岩】沙灘踩水。於海景咖啡廳品嚐冰美式/手沖與蝦蝦飯。", tags: [{text: "☕ 古宇利海景咖啡", type: "food"}, {text: "🏖️ 沙灘踩水", type: "kid"}] },
       { time: "17:30 - 19:30", title: "晚餐：名護 百年古家 大家 (Ufuya)", desc: "置身於 100 年歷史琉球古民家與庭園瀑布造景中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}] }
@@ -44,7 +45,7 @@ const itineraryData = {
     timeline: [
       { time: "09:30 - 10:15", title: "☕ 上午咖啡：BEB5 瀨良垣 晨間咖啡 ➔ 駛往沖繩市", desc: "享用 BEB5 晨間咖啡，行經國道出發前往位於沖繩市的兒童王國樂園。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約40分", type: "drive"}] },
       { time: "10:15 - 13:00", title: "沖繩兒童王國 (Okinawa Zoo & Museum)", desc: "結合動物園與 Wonder Museum 互動兒童館！可近距離觀賞大象、長頸鹿、獅子與可愛動物體驗，適合 2 位小朋友放電玩耍。", tags: [{text: "🦁 動物園與兒童館", type: "kid"}, {text: "🐘 親子餵食體驗", type: "kid"}] },
-      { time: "13:30 - 14:45", title: "☕ 下午咖啡＆重頭戲：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡！", desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的【Mame Pole Pole】！現場品嚐神級手沖單品，採購招牌 Gajumaru 豆與沖繩在地 Ada Farm 極品咖啡豆！", tags: [{text: "🥇 Mame Pole Pole世界亞軍", type: "food"}, {text: "🛍️ 採購世界級咖啡豆", type: "food"}] },
+      { time: "13:30 - 14:45", title: "☕ 下午咖啡＆重頭戲：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡！", desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的【Mame Pole Pole】！現場品嚐神級單品，採購招牌 Gajumaru 豆與沖繩在地 Ada Farm 極品咖啡豆！", tags: [{text: "🥇 Mame Pole Pole世界亞軍", type: "food"}, {text: "🛍️ 採購世界級咖啡豆", type: "food"}] },
       { time: "15:00 - 17:30", title: "AEON MALL 永旺夢樂城來客夢 ＆ 超市和牛大採購", desc: "距離 Mame Pole Pole 僅 5 分鐘！逛阿卡將本鋪母嬰用品、玩具反斗城。下午前往 1F 【AEON Style 超市】採購今晚火鍋食材：沖繩 A5 黑毛和牛/石垣牛火鍋肉片、阿古豬、高湯包與水果！", tags: [{text: "🛒 AEON超市採購和牛", type: "food"}, {text: "🥩 沖繩A5黑毛和牛", type: "food"}] },
       { time: "17:30 - 18:30", title: "載著滿滿食材駛回星野 BEB5 瀨良垣", desc: "將新鮮和牛、阿古豬與蔬菜裝入保冷袋載回飯店。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
       { time: "18:30 - 21:00", title: "🍲 晚餐：BEB5 飯店套房廚房【DIY 頂級和牛＆阿古豬火鍋大餐】", desc: "充分利用 BEB5 房間內完整的廚房設施與大冰箱！用 IH 電磁爐煮高湯，全家 5大2小 溫馨圍爐享用 A5 和牛與阿古豬火鍋，自在舒適又美味！", tags: [{text: "🍲 BEB5 溫馨和牛火鍋", type: "food"}, {text: "🥂 溫馨家庭時光", type: "kid"}] }
@@ -77,6 +78,7 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。" },
   { name: "ZHYVAGO COFFEE ROASTERS", category: "cafe", location: "美濱美國村", desc: "☕ 美國村海景第一排重工業風美式烘豆廠，質感手沖與超酷復古包裝咖啡豆。" },
   { name: "OKINAWA CERRADO COFFEE", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。" },
@@ -84,7 +86,6 @@ const gourmetData = [
   { name: "AEON Style 超市 沖繩A5黑毛和牛", category: "yakiniku", location: "AEON Rycom", desc: "販售頂級沖繩A5黑毛和牛、石垣牛與阿古豬火鍋肉片，搭配日式火鍋高湯包於 BEB5 自煮。" },
   { name: "A&W 美式漢堡 (PARCO CITY / 牧港店)", category: "naha", location: "浦添/那霸", desc: "沖繩美式漢堡始祖！必吃莫札瑞拉起司堡、捲捲薯條 (Curly Fries) 與免費續杯 Root Beer。" },
   { name: "Blue Seal 冰淇淋 (美國村 / 恩納店)", category: "cafe", location: "全沖繩", desc: "沖繩標誌性美式冰淇淋，必吃鹽金楚餅 (Salt Cookies)、紅芋 (Beni-imo) 與香檸 (Shikuwasa) 口味。" },
-  { name: "琉球之牛 (恩納店)", category: "yakiniku", location: "恩納村", desc: "沖繩最知名燒肉，A5 級黑毛和牛與極品牛舌，肉質入口即化。（需提前預約）" },
   { name: "百年古家 大家 (Ufuya)", category: "soba", location: "名護市", desc: "百年琉球古民家，景觀庭園瀑布造景，阿古豬涮涮鍋與古家沖繩麵。" },
   { name: "星野 Banta Cafe", category: "cafe", location: "讀谷村", desc: "日本最大規模海景崖邊咖啡廳，設有無邊際榻榻米與海風台階。" },
   { name: "傑克牛排 (Jack's Steak)", category: "naha", location: "那霸市區", desc: "昭和風味美式牛排館，菲力牛排嫩口多汁，那霸在地人強烈推薦。" },
