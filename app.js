@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with 9/3 17:00 Ryukyu no Ushi Chatan Booking #MR3Q6W)
+// Okinawa Travel Assistant - Application Logic (Updated with RYUKYU BEACH CLUB)
 // ==========================================================================
 
 const itineraryData = {
@@ -28,13 +28,13 @@ const itineraryData = {
     ]
   },
   day3: {
-    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 萬座毛 ➔ ☕ Banta Cafe ➔ 美國村 ☕ ZHYVAGO 🎆 晚上8點煙火！",
-    theme: "☕ 上午：鳳梨冷萃 ＆ ☕ 下午：星野Banta Cafe ＆ ☕ 晚上：ZHYVAGO海景烘豆廠 🎆 20:00煙火",
+    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 晚上8點煙火！",
+    theme: "☕ 上午：鳳梨冷萃 ＆ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ＆ ☕ 晚上：ZHYVAGO 🎆 20:00煙火",
     timeline: [
       { time: "10:00 - 12:30", title: "☕ 上午咖啡：名護鳳梨園 (Pineapple Park) 特調冷萃咖啡", desc: "乘坐自動駕駛「鳳梨遊覽車」穿梭熱帶植物區，享用特調鳳梨冷萃咖啡或鳳梨冰霜咖啡！", tags: [{text: "🍍 自動駕駛鳳梨車", type: "kid"}, {text: "☕ 鳳梨冷萃咖啡", type: "food"}] },
       { time: "12:30 - 13:30", title: "午餐：宮里麵 (Miyazato Soba) / 岸本食堂", desc: "名護在地人極力推薦的老字號沖繩麵，大塊滷五花肉與軟骨排骨，湯頭鮮美，價格平實。", tags: [{text: "🍜 傳統沖繩麵", type: "food"}] },
       { time: "14:00 - 15:00", title: "萬座毛觀景台 (Manzamo)", desc: "欣賞天然雕琢的象鼻形狀琉球石灰岩斷崖，走訪全新建成的無障礙景觀步道。", tags: [{text: "🚗 車程: 約30分", type: "drive"}, {text: "🐘 象鼻岩景致", type: "kid"}] },
-      { time: "15:30 - 17:30", title: "☕ 下午咖啡：【星野集團 Banta Cafe】海崖榻榻米海景咖啡", desc: "日本最大規模海崖海景咖啡廳！設有無邊際海景榻榻米席，品嚐冰拿鐵與特調海風咖啡，大人看海放鬆、小孩踩沙。", tags: [{text: "☕ Banta海景咖啡", type: "food"}, {text: "🌅 絕美夕陽", type: "kid"}] },
+      { time: "15:30 - 17:30", title: "☕ 下午咖啡：【RYUKYU BEACH CLUB (琉球海灘俱樂部)】海景第一排沙發咖啡廳", desc: "【替換指定景點】位於恩納村瀨良垣海濱！全開放式海景第一排戶外沙發席，品嚐冰拿鐵、特調飲品與巴西莓碗，看海聽浪。（週六熱門時段建議提早線上預約）", tags: [{text: "☕ RYUKYU BEACH CLUB", type: "food"}, {text: "🏖️ 瀨良垣海景沙發", type: "kid"}] },
       { time: "18:00 - 19:45", title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】@ 美國村", desc: "美濱美國村 Depot Island 沿海步道！重工業美式海景烘豆廠，喝極品手沖/冰拿鐵，買美式復古包裝咖啡豆！晚餐享用塔可飯與 Blue Seal 冰淇淋。", tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🛍️ 買美式復古豆", type: "food"}] },
       { time: "19:50 - 20:10", title: "🎆【重點大推】美國村週六 20:00 海濱煙火秀 (Chatan Fireworks)", desc: "預先前往 Depot Island 沿海步道占位！20:00 準時施放約 3 分鐘璀璨浪漫的海上煙火，5大2小全家共度浪漫週六夜晚！", tags: [{text: "🎆 20:00 準時煙火", type: "kid"}, {text: "✨ Depot Island coastal boardwalk", type: "kid"}] }
     ]
@@ -78,6 +78,7 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。" },
   { name: "ZHYVAGO COFFEE ROASTERS", category: "cafe", location: "美濱美國村", desc: "☕ 美國村海景第一排重工業風美式烘豆廠，質感手沖與超酷復古包裝咖啡豆。" },
@@ -87,7 +88,6 @@ const gourmetData = [
   { name: "A&W 美式漢堡 (PARCO CITY / 牧港店)", category: "naha", location: "浦添/那霸", desc: "沖繩美式漢堡始祖！必吃莫札瑞拉起司堡、捲捲薯條 (Curly Fries) 與免費續杯 Root Beer。" },
   { name: "Blue Seal 冰淇淋 (美國村 / 恩納店)", category: "cafe", location: "全沖繩", desc: "沖繩標誌性美式冰淇淋，必吃鹽金楚餅 (Salt Cookies)、紅芋 (Beni-imo) 與香檸 (Shikuwasa) 口味。" },
   { name: "百年古家 大家 (Ufuya)", category: "soba", location: "名護市", desc: "百年琉球古民家，景觀庭園瀑布造景，阿古豬涮涮鍋與古家沖繩麵。" },
-  { name: "星野 Banta Cafe", category: "cafe", location: "讀谷村", desc: "日本最大規模海景崖邊咖啡廳，設有無邊際榻榻米與海風台階。" },
   { name: "傑克牛排 (Jack's Steak)", category: "naha", location: "那霸市區", desc: "昭和風味美式牛排館，菲力牛排嫩口多汁，那霸在地人強烈推薦。" },
   { name: "Kouri Shrimp 蝦蝦飯", category: "cafe", location: "古宇利島", desc: "蒜味奶油蝦飯，配上夏威夷風情特調飲品，打卡必吃。" },
   { name: "幸福鬆餅 (A Happy Pancake)", category: "cafe", location: "瀨長島", desc: "極致鬆軟的舒芙蕾鬆餅，配上夕陽海景與飛機起降。" },
