@@ -60,7 +60,7 @@
       </div>
       <div class="alert-content">
         <p><strong>座椅與行李配置：</strong>Toyota 8 人座油電 Alphard (2+3+3)。7 位成員乘坐 7 個位置，第 3 排具備 <strong>50/50 左右單邊收折功能</strong>，可輕鬆直立擺放 <strong>3 ~ 4 個大行李箱與推車</strong>！</p>
-        <p><strong>雨天行程保障：</strong>本行程高達 <strong>80% 以上景點均為「☔ 雨天OK」室內或全遮雨設施</strong>（如美麗海水族館、名護鳳梨園防雨車、PARCO CITY、AEON Rycom、兒童王國 Wonder Museum、yacchi&moon 陶器街、琉球之牛、BEB5 自煮和牛火鍋等），即使遇雨也能玩得極致盡興！</p>
+        <p><strong>雨天行程保障：</strong>本行程高達 <strong>85% 以上景點均為「☔ 雨天OK」室內或全遮雨設施</strong>（如美麗海水族館、名護鳳梨園防雨車、PARCO CITY、AEON Rycom、兒童王國 Wonder Museum、yacchi&moon 陶器街、琉球之牛、BEB5 自煮和牛火鍋等），即使遇雨也能玩得極致盡興！</p>
       </div>
     </div>
   </section>
@@ -68,7 +68,8 @@
   <!-- Navigation Tabs -->
   <nav class="sticky-nav">
     <div class="container nav-container">
-      <button class="nav-btn active" data-tab="itinerary">🗓️ 行程規劃 (6天5夜)</button>
+      <button class="nav-btn active" data-tab="overview">🗺️ 沖繩地圖與總覽</button>
+      <button class="nav-btn" data-tab="itinerary">🗓️ 行程規劃 (6天5夜)</button>
       <button class="nav-btn" data-tab="hotels">🏨 飯店特色介紹</button>
       <button class="nav-btn" data-tab="gourmet">☕ 咖啡與必吃美食</button>
       <button class="nav-btn" data-tab="mapcodes">🗺️ 導航 Mapcode 彙整</button>
@@ -78,8 +79,200 @@
 
   <main class="container main-content">
 
+    <!-- Tab 0: Map & Overview Page (NEW!) -->
+    <div id="tab-overview" class="tab-pane active">
+      <div class="section-title-wrap">
+        <h2>🗺️ 沖繩本島景點地理位置地圖與行程總覽</h2>
+        <p>全景劃分【北部】、【中部】與【南部那霸】三大區域，直觀掌握 6 天自駕動線與景點屬性！</p>
+      </div>
+
+      <div class="overview-layout">
+        <!-- Interactive Okinawa SVG Map Card -->
+        <div class="map-container-card">
+          <div class="map-header">
+            <h3>🗺️ 沖繩本島全區域地理分布圖</h3>
+            <div class="map-legend">
+              <div class="legend-item"><div class="legend-dot north"></div>北部</div>
+              <div class="legend-item"><div class="legend-dot central"></div>中部</div>
+              <div class="legend-item"><div class="legend-dot south"></div>南部/那霸</div>
+            </div>
+          </div>
+
+          <div class="svg-map-wrapper">
+            <svg class="map-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+              <!-- Okinawa Island Base Path Graphic -->
+              <path d="M 120 440 C 130 420, 160 410, 170 380 C 180 350, 190 330, 200 300 C 210 270, 230 240, 250 210 C 270 180, 290 140, 310 100 C 320 80, 300 60, 270 70 C 240 80, 230 110, 220 140 C 200 170, 180 210, 170 240 C 160 270, 150 300, 140 330 C 130 360, 100 390, 90 420 Z" 
+                    fill="#1e293b" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+
+              <!-- Northern Region Pins (Blue) -->
+              <g class="map-pin" transform="translate(290, 80)">
+                <circle cx="0" cy="0" r="14" class="pin-circle north" />
+                <text x="0" y="0" class="pin-label">1</text>
+                <title>美麗海水族館 & CAMEL三明治 (Day 2)</title>
+              </g>
+              <g class="map-pin" transform="translate(320, 95)">
+                <circle cx="0" cy="0" r="12" class="pin-circle north" />
+                <text x="0" y="0" class="pin-label">2</text>
+                <title>古宇利島 & 心形岩 (Day 2)</title>
+              </g>
+              <g class="map-pin" transform="translate(260, 130)">
+                <circle cx="0" cy="0" r="12" class="pin-circle north" />
+                <text x="0" y="0" class="pin-label">3</text>
+                <title>名護鳳梨園 & 百年古家大家 (Day 2/3)</title>
+              </g>
+
+              <!-- Central Region Pins (Amber) -->
+              <g class="map-pin" transform="translate(210, 190)">
+                <circle cx="0" cy="0" r="15" class="pin-circle central" />
+                <text x="0" y="0" class="pin-label">4</text>
+                <title>星野 BEB5 瀨良垣 & RYUKYU BEACH CLUB (前4晚據點)</title>
+              </g>
+              <g class="map-pin" transform="translate(195, 220)">
+                <circle cx="0" cy="0" r="12" class="pin-circle central" />
+                <text x="0" y="0" class="pin-label">5</text>
+                <title>萬座毛觀景台 (Day 3)</title>
+              </g>
+              <g class="map-pin" transform="translate(170, 270)">
+                <circle cx="0" cy="0" r="14" class="pin-circle central" />
+                <text x="0" y="0" class="pin-label">6</text>
+                <title>美濱美國村 & 琉球之牛北谷店 (Day 1/3)</title>
+              </g>
+              <g class="map-pin" transform="translate(190, 290)">
+                <circle cx="0" cy="0" r="13" class="pin-circle central" />
+                <text x="0" y="0" class="pin-label">7</text>
+                <title>Mame Pole Pole世界亞軍咖啡 & 兒童王國 (Day 4)</title>
+              </g>
+              <g class="map-pin" transform="translate(180, 310)">
+                <circle cx="0" cy="0" r="12" class="pin-circle central" />
+                <text x="0" y="0" class="pin-label">8</text>
+                <title>AEON Rycom 永旺夢樂城 (Day 4)</title>
+              </g>
+
+              <!-- Southern & Naha Region Pins (Red) -->
+              <g class="map-pin" transform="translate(150, 350)">
+                <circle cx="0" cy="0" r="12" class="pin-circle south" />
+                <text x="0" y="0" class="pin-label">9</text>
+                <title>SAN-A PARCO CITY & 港川Cerrado咖啡 (Day 1)</title>
+              </g>
+              <g class="map-pin" transform="translate(130, 390)">
+                <circle cx="0" cy="0" r="14" class="pin-circle south" />
+                <text x="0" y="0" class="pin-label">10</text>
+                <title>那霸國際通 & yacchi&moon壺屋陶器街 (Day 5)</title>
+              </g>
+              <g class="map-pin" transform="translate(115, 410)">
+                <circle cx="0" cy="0" r="13" class="pin-circle south" />
+                <text x="0" y="0" class="pin-label">11</text>
+                <title>THE NEST NAHA & 傑克牛排 & 波上宮 (Day 5/6)</title>
+              </g>
+              <g class="map-pin" transform="translate(100, 435)">
+                <circle cx="0" cy="0" r="14" class="pin-circle south" />
+                <text x="0" y="0" class="pin-label">12</text>
+                <title>那霸機場 OKA & 瀨長島 & 35 COFFEE (Day 5/6)</title>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Region Spotlight Cards List -->
+        <div class="regions-container">
+          <!-- North Region Card -->
+          <div class="region-card">
+            <div class="region-card-header">
+              <div class="region-card-title"><span class="region-badge North">北部</span> 沖繩北部美景與水族館區</div>
+              <span class="tag rain-ok">☔ 雨天 80% OK</span>
+            </div>
+            <div class="spotlight-list">
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">1</div>
+                  <div class="spotlight-name">美麗海水族館 & CAMEL 三明治 ☔</div>
+                </div>
+                <div class="spotlight-day">Day 2</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">2</div>
+                  <div class="spotlight-name">古宇利島 & 心形岩踩水</div>
+                </div>
+                <div class="spotlight-day">Day 2</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">3</div>
+                  <div class="spotlight-name">名護鳳梨園 ☔ & 百年古家大家 ☔</div>
+                </div>
+                <div class="spotlight-day">Day 2 / Day 3</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Central Region Card -->
+          <div class="region-card">
+            <div class="region-card-header">
+              <div class="region-card-title"><span class="region-badge Central">中部</span> 恩納村、北谷美國村與沖繩市</div>
+              <span class="tag rain-ok">☔ 雨天 90% OK</span>
+            </div>
+            <div class="spotlight-list">
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">4</div>
+                  <div class="spotlight-name">星野 BEB5 瀨良垣 ☔ & RYUKYU BEACH CLUB</div>
+                </div>
+                <div class="spotlight-day">前4晚據點 / Day 3</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">6</div>
+                  <div class="spotlight-name">琉球之牛 北谷店 ☔ (訂位#MR3Q6W) & 美國村煙火</div>
+                </div>
+                <div class="spotlight-day">Day 1 / Day 3</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">7</div>
+                  <div class="spotlight-name">Mame Pole Pole 世界亞軍咖啡 ☔ & 兒童王國 ☔</div>
+                </div>
+                <div class="spotlight-day">Day 4</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- South & Naha Region Card -->
+          <div class="region-card">
+            <div class="region-card-header">
+              <div class="region-card-title"><span class="region-badge South">南部/那霸</span> 那霸市區、港川與機場區</div>
+              <span class="tag rain-ok">☔ 雨天 100% OK</span>
+            </div>
+            <div class="spotlight-list">
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">9</div>
+                  <div class="spotlight-name">PARCO CITY ☔ & 港川 Cerrado 咖啡 ☔</div>
+                </div>
+                <div class="spotlight-day">Day 1</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">10</div>
+                  <div class="spotlight-name">yacchi&moon 壺屋陶器街 ☔ & 國際通拱廊 ☔</div>
+                </div>
+                <div class="spotlight-day">Day 5</div>
+              </div>
+              <div class="spotlight-item">
+                <div class="spotlight-info">
+                  <div class="spotlight-num">11</div>
+                  <div class="spotlight-name">THE NEST NAHA ☔ & 機場送機 / 35 COFFEE ☔</div>
+                </div>
+                <div class="spotlight-day">Day 5 / Day 6</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Tab 1: Itinerary -->
-    <div id="tab-itinerary" class="tab-pane active">
+    <div id="tab-itinerary" class="tab-pane">
       <div class="section-title-wrap">
         <h2>🗓️ Day-by-Day 每日詳細行程與路線導覽</h2>
         <p>行程全面標註 <strong>☔ 雨天OK</strong> 標籤，室內與遮雨景點一目了然！</p>
@@ -234,28 +427,28 @@
               <td><strong>那霸國際通 (拱廊街 / 牧志市場)</strong></td>
               <td>33 157 382*41</td>
               <td>098-867-1171</td>
-              <td>☔ 雨天OK｜全遮雨拱廊商店街，Potama 豬肉蛋飯糰 / 暖暮拉麵</td>
+              <td>☔ 雨天OK｜全遮雨拱廊商店街，Potama 豬肉蛋飯糰</td>
             </tr>
             <tr>
               <td><span class="region-badge South">那霸</span></td>
               <td><strong>那霸機場國際線 (9/7 17:30送機)</strong></td>
               <td>33 123 279*00</td>
               <td>098-840-1179</td>
-              <td>☔ 雨天OK｜🛫 17:30 準時抵達，35 COFFEE 買珊瑚咖啡豆 / 送機 CI 113</td>
+              <td>☔ 雨天OK｜🛫 17:30 準時抵達，35 COFFEE 買珊瑚豆 / 送機</td>
             </tr>
             <tr>
               <td><span class="region-badge Central">中部</span></td>
               <td><strong>AEON Rycom (和牛火鍋採購)</strong></td>
               <td>33 530 406*45</td>
               <td>0989-30-0425</td>
-              <td>☔ 雨天OK｜🛒 1F AEON Style 超市採購沖繩 A5 黑毛和牛與阿古豬</td>
+              <td>☔ 雨天OK｜🛒 1F 超市採購沖繩 A5 黑毛和牛與阿古豬</td>
             </tr>
             <tr>
               <td><span class="region-badge Central">中部</span></td>
               <td><strong>美國村 (週六 20:00 煙火秀)</strong></td>
               <td>33 526 450*63</td>
               <td>0989-26-5678</td>
-              <td>🎆 戶外煙火｜週六 20:00 準時施放，Depot Island 沿海步道最佳觀賞點</td>
+              <td>🎆 戶外煙火｜週六 20:00 準時施放，沿海步道</td>
             </tr>
             <tr>
               <td><span class="region-badge South">浦添</span></td>
@@ -276,7 +469,7 @@
               <td><strong>沖繩美麗海水族館【指定景點】</strong></td>
               <td>553 075 797*77</td>
               <td>0980-48-3748</td>
-              <td>☔ 雨天OK｜世界級室內水族館，黑潮之海鯨鯊、海豚秀遮雨看台</td>
+              <td>☔ 雨天OK｜世界級室內水族館，鯨鯊、遮雨海豚秀</td>
             </tr>
             <tr>
               <td><span class="region-badge North">北部</span></td>
@@ -290,7 +483,7 @@
               <td><strong>名護鳳梨園 (Pineapple Park)</strong></td>
               <td>206 716 467*85</td>
               <td>0980-53-3990</td>
-              <td>☔ 雨天OK｜全遮雨自動駕駛鳳梨車，室內溫室與品酒區</td>
+              <td>☔ 雨天OK｜全遮雨自動駕駛鳳梨車，室內溫室品酒</td>
             </tr>
             <tr>
               <td><span class="region-badge North">北部</span></td>
@@ -304,14 +497,14 @@
               <td><strong>沖繩兒童王國 (Wonder Museum)</strong></td>
               <td>33 560 216*25</td>
               <td>0989-33-4190</td>
-              <td>☔ 雨天OK｜Wonder Museum 3層樓全室內冷氣雨天互動兒童館</td>
+              <td>☔ 雨天OK｜Wonder Museum 3層樓全室內冷氣雨天館</td>
             </tr>
             <tr>
               <td><span class="region-badge Central">中部</span></td>
               <td><strong>星野 BEB5 沖繩瀨良垣</strong></td>
               <td>206 314 553*33</td>
               <td>0989-67-8900</td>
-              <td>☔ 雨天OK｜前4晚住宿據點，房內廚房完美自煮火鍋，TAMARIBA免費晨咖啡</td>
+              <td>☔ 雨天OK｜房內廚房完美自煮火鍋，TAMARIBA免費晨咖啡</td>
             </tr>
             <tr>
               <td><span class="region-badge South">南部</span></td>
@@ -325,7 +518,7 @@
               <td><strong>瀨長島 (Umikaji Terrace)</strong></td>
               <td>33 002 602*06</td>
               <td>0988-51-7446</td>
-              <td>🌥️ 半戶外階梯｜幸福鬆餅海景咖啡（室內座位雨天OK）</td>
+              <td>🌥️ 半戶外階梯｜幸福鬆餅海景咖啡（室內席雨天OK）</td>
             </tr>
             <tr>
               <td><span class="region-badge South">那霸</span></td>

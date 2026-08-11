@@ -254,6 +254,200 @@ body {
   font-size: 0.95rem;
 }
 
+/* ==========================================================================
+  NEW: Interactive Okinawa Map & Overview System
+  ========================================================================== */
+.overview-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .overview-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-container-card {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 12px;
+}
+
+.map-header h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.map-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-dot.north { background: #38bdf8; }
+.legend-dot.central { background: #fbbf24; }
+.legend-dot.south { background: #f87171; }
+
+.svg-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.map-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Pin styles on SVG Map */
+.map-pin {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.map-pin:hover {
+  transform: scale(1.35);
+  z-index: 50;
+}
+
+.pin-circle {
+  stroke: #ffffff;
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.pin-circle.north { fill: #0284c7; }
+.pin-circle.central { fill: #d97706; }
+.pin-circle.south { fill: #dc2626; }
+
+.pin-label {
+  fill: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 11px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+/* Region Spotlight Cards */
+.regions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.region-card {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+.region-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: var(--surface-hover);
+}
+
+.region-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.region-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.spotlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spotlight-item {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.spotlight-item:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.spotlight-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spotlight-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.spotlight-day {
+  font-size: 0.75rem;
+  color: var(--accent-light);
+  background: rgba(245, 158, 11, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
 /* Day Selector */
 .day-selector {
   display: grid;
