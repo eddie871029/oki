@@ -1,18 +1,17 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with ☔ 雨天OK Badges)
+// Okinawa Travel Assistant - Application Logic (Updated with Araha Beach Alternative)
 // ==========================================================================
 
 const itineraryData = {
   day1: {
-    title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W) ➔ ☕ 港川 Cerrado Coffee ➔ 🥩 17:00 琉球之牛(北谷店) ➔ BEB5 Check-in",
-    theme: "✈️ 10:45 抵達沖繩 ➔ ☕ 下午：Cerrado 港川外人住宅手沖 ➔ 🥩 17:00 琉球之牛(北谷店 #MR3Q6W) ➔ BEB5 入住",
+    title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W) ➔ ☕ 港川 Cerrado / 🏴‍☠️ 安良波海灘 ➔ 🥩 17:00 琉球之牛(北谷店) ➔ BEB5 Check-in",
+    theme: "✈️ 10:45 抵達沖繩 ➔ ☕ 下午：Cerrado 港川外人住宅手沖（或 🏴‍☠️ 替代：安良波海灘海盜船公園） ➔ 🥩 17:00 琉球之牛(北谷店 #MR3Q6W) ➔ BEB5 入住",
     timeline: [
       { time: "08:15 - 10:45", title: "搭乘華航 CI 120 班機 (TPE ➔ OKA)", desc: "桃園機場第一航廈起飛，10:45 準時抵達沖繩那霸機場 (OKA)。", tags: [{text: "✈️ 華航 CI 120", type: "drive"}] },
       { time: "10:45 - 12:00", title: "辦理入境、提領行李 & 領取 8人座油電 Alphard", desc: "提領行李，搭乘接駁車至 Toyota Rent a Car 領取 8人座油電 Alphard（2+3+3 配置）。7 位成員坐滿 7 個位置，第3排可單邊折疊收收（50/50分折），擺放 3~4 個大行李箱與推車。", tags: [{text: "🚗 領取8人座油電Alphard", type: "drive"}, {text: "✨ 3排可單邊收折放置行李", type: "kid"}] },
       { time: "12:20 - 14:30", title: "☕ 上午咖啡＆美食：SAN-A PARCO CITY ＆ 【指定美食】A&W 漢堡", desc: "距機場僅 20 分鐘車程！於無敵海景美食街享用【A&W 美式漢堡】與特調晨間冰咖啡。全室內大型商場，雨天完全不受影響。", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ 晨間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "14:35 - 15:45", title: "☕ 下午咖啡＆買豆：【OKINAWA CERRADO COFFEE】@ 港川外人住宅街", desc: "距離 PARCO CITY 僅 5 分鐘！造訪 1986 年創立老字號烘豆廠【Cerrado Coffee】，室內品嚐精緻單品手沖並採購特製濾掛包與咖啡豆。順道品嚐 oHacorté 手工水果塔！", tags: [{text: "☕ Cerrado手沖咖啡", type: "food"}, {text: "🛍️ 買咖啡豆/濾掛", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "15:45 - 16:45", title: "駛往北谷美濱區域（美國村周邊）", desc: "沿國道 58 號海岸線駛往北谷，預備前往晚餐地點。（車程約 25 分鐘）", tags: [{text: "🚗 車程: 約25分", type: "drive"}] },
-      { time: "17:00 - 19:00", title: "🥩 晚餐：【琉球之牛 北谷店】已預約成功！(Confirmation # MR3Q6W)", desc: "【已訂位 17:00】高級室內獨立燒肉包廂/桌席！品嚐頂級 A5 沖繩縣產黑毛和牛燒肉套餐與必點鎮店【炙燒和牛壽司】！", tags: [{text: "🥩 琉球之牛(北谷店)", type: "food"}, {text: "✅ 預約號#MR3Q6W", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "14:35 - 16:30", title: "☕ 下午行程：【OKINAWA CERRADO COFFEE】（或 🏴‍☠️ 替代方案：安良波海灘）", desc: "【首選方案】造訪 1986 年創立老字號烘豆廠【Cerrado Coffee】，室內品嚐精緻單品手沖並採購特製濾掛包與咖啡豆。順道品嚐 oHacorté 手工水果塔！\n💡【親子替代方案】安良波海灘 (Araha Beach)！位於北谷町，擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道，適合 2 位小朋友放電！（距離 17:00 琉球之牛北谷店僅 5 分鐘車程）", tags: [{text: "☕ Cerrado手沖咖啡", type: "food"}, {text: "🛍️ 買咖啡豆/濾掛", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}, {text: "🏴‍☠️ 替代: 安良波海灘海盜船公園", type: "kid"}] },
+      { time: "17:00 - 19:00", title: "🥩 晚餐：【琉球之牛 北谷店】已預約成功！(Confirmation # MR3Q6W)", desc: "【已訂位 17:00】距安良波海灘/港川均極近！高級室內獨立燒肉包廂/桌席！品嚐頂級 A5 沖繩縣產黑毛和牛燒肉套餐與必點鎮店【炙燒和牛壽司】！", tags: [{text: "🥩 琉球之牛(北谷店)", type: "food"}, {text: "✅ 預約號#MR3Q6W", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "19:15 - 20:15", title: "晚餐後駛往恩納村【星野 BEB5 沖繩瀨良垣】辦理 Check-in", desc: "享用完極品燒肉大餐後，駕駛 Alphard 輕鬆行經國道出發前往恩納村。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
       { time: "20:15 - 21:30", title: "🏨 星野 BEB5 沖繩瀨良垣 Check-in 入住 ＆ 開箱家庭套房", desc: "辦理 BEB5 入住手續，卸下行李。在室內 24h TAMARIBA Lounge 喝杯晚間咖啡/啤酒放鬆，早點休息迎接明日行程！", tags: [{text: "🏨 前4晚住宿據點", type: "drive"}, {text: "☕ TAMARIBA晚間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
     ]
@@ -79,6 +78,7 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "安良波海灘 (Araha Beach) - 海盜船公園 (Day 1 替代)", category: "cafe", location: "北谷町 (距琉球之牛5分)", desc: "🏴‍☠️ 擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道！2 位小朋友極致放電放鬆勝地。" },
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！【☔ 雨天OK】" },
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="timeline-dot"></div>
           <div class="timeline-time">${item.time}</div>
           <div class="timeline-title">${item.title}</div>
-          <div class="timeline-desc">${item.desc}</div>
+          <div class="timeline-desc" style="white-space: pre-line;">${item.desc}</div>
           <div class="tag-list">${tagsHtml}</div>
         </div>
       `;
