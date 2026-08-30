@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Satchan Soba)
+// Okinawa Travel Assistant - Application Logic (Updated with American Village Dining for 7)
 // ==========================================================================
 
 const itineraryData = {
@@ -34,14 +34,14 @@ const itineraryData = {
     ]
   },
   day3: {
-    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 🍜 Satchan Soba ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 晚上8點煙火！",
-    theme: "☕ 上午：鳳梨冷萃 ➔ 🍜 名護 Satchan Soba ➔ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ➔ ☕ 晚上：ZHYVAGO 🎆 20:00煙火",
+    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 🍜 Satchan Soba ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 20:00煙火！",
+    theme: "☕ 上午：鳳梨冷萃 ➔ 🍜 名護 Satchan Soba ➔ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ➔ ☕ 晚間：ZHYVAGO & 美國村7人親子晚餐 🎆 20:00煙火",
     timeline: [
       { time: "10:00 - 12:30", title: "☕ 上午咖啡：名護鳳梨園 (Pineapple Park) 特調冷萃咖啡", desc: "【雨天超完美景點】搭乘全遮雨防雨設施的自動駕駛「鳳梨遊覽車」穿梭熱帶植物園區，室內熱帶溫室與鳳梨試飲品嚐區，享用鳳梨冷萃咖啡！", tags: [{text: "🍍 自動駕駛鳳梨車", type: "kid"}, {text: "☕ 鳳梨冷萃咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "12:30 - 13:30", title: "🍜 午餐：名護人氣名店【Satchan Soba (幸ちゃんそば)】（或 宮里麵）", desc: "名護極具盛名的在地人氣沖繩麵！濃郁醇厚的家常高湯、Q彈手工麵條與燉煮至極致軟嫩的軟骨排骨(Soki)與三層肉！亦有特製艾草麵條可選，室內舒適冷氣席。（☔ 雨天 OK）", tags: [{text: "🍜 Satchan Soba (幸ちゃんそば)", type: "food"}, {text: "🥩 軟骨排骨沖繩麵", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "14:00 - 15:00", title: "萬座毛觀景台 (Manzamo)", desc: "欣賞天然雕琢的象鼻形狀琉球石灰岩斷崖，走訪全新建成的無障礙景觀步道。（戶外景點）", tags: [{text: "🚗 車程: 約30分", type: "drive"}, {text: "🐘 象鼻岩景致", type: "kid"}] },
       { time: "15:30 - 17:30", title: "☕ 下午咖啡：【RYUKYU BEACH CLUB (琉球海灘俱樂部)】海景第一排沙發咖啡廳", desc: "位於恩納村瀨良垣海濱！全開放式海景第一排戶外沙發席，品嚐冰拿鐵、特調飲品與巴西莓碗，看海聽浪。", tags: [{text: "☕ RYUKYU BEACH CLUB", type: "food"}, {text: "🏖️ 瀨良垣海景沙發", type: "kid"}] },
-      { time: "18:00 - 19:45", title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】@ 美國村", desc: "美濱美國村 Depot Island！室內重工業美式海景烘豆廠，喝極品手沖/冰拿鐵，買美式復古包裝咖啡豆！美國村多數商場設有遮雨拱廊步道。", tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🛍️ 買美式復古豆", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "18:00 - 19:45", title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】＆ 🌮 美國村 7 人親子晚餐", desc: "美濱美國村 Depot Island！造訪室內重工業美式海景烘豆廠喝極品手沖/冰拿鐵，買美式復古包裝咖啡豆！\n🍴【7人親子晚餐精選推薦】：\n1. 🌮 Taco Rice Cafe Kijimuna (Depot Island 2F)：溫和歐姆蛋塔可飯，不辣滑蛋小朋友超愛，吃完直接下樓看煙火！\n2. 🍣 美濱迴轉壽司市場 (グルメ回転ずし市場)：大卡座適合7人，小朋友拿玉子燒與新鮮壽司超開心！\n3. 🍕 Chatan Harbor Brewery / Red Lobster：超寬敞室內大桌，大人喝精釀啤酒吃牛排海鮮，小朋友吃現烤披薩與義大利麵！", tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🌮 歐姆蛋塔可飯/美濱壽司", type: "food"}, {text: "👨‍👩‍👧‍👦 適合5大2小大桌席", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "19:50 - 20:10", title: "🎆【重點大推】美國村週六 20:00 海濱煙火秀 (Chatan Fireworks)", desc: "預先前往 Depot Island 沿海步道占位！20:00 準時施放約 3 分鐘璀璨浪漫的海上煙火。（如逢雨天風浪大可能彈性調整）", tags: [{text: "🎆 20:00 準時煙火", type: "kid"}, {text: "✨ Depot Island coastal boardwalk", type: "kid"}] }
     ]
   },
@@ -84,6 +84,9 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "Taco Rice Cafe Kijimuna (Depot Island 2F - 美國村親子首選)", category: "cafe", location: "美濱美國村 Depot Island 2F", desc: "🌮 沖繩經典「歐姆蛋塔可飯」(Omutaco)！滑嫩半熟歐姆蛋配上不辣起司與肉醬，小朋友超級愛吃！座位寬敞，位在 ZHYVAGO 樓上與煙火步道旁。【☔ 雨天OK】" },
+  { name: "美濱迴轉壽司市場 (グルメ回転ずし市場 美浜店)", category: "cafe", location: "美濱美國村", desc: "🍣 超人氣迴轉壽司！大型寬敞沙發卡座極度適合 5大2小 7人用餐。新鮮大塊生魚片壽司、玉子燒、炸天婦羅與熱騰騰烏龍麵，大人小朋友都滿意。【☔ 雨天OK】" },
+  { name: "Chatan Harbor Brewery & Restaurant", category: "cafe", location: "北谷港邊 (美國村周邊)", desc: "🍺 🍕 極致寬敞的港灣海景餐廳！大人享受特製黑潮精釀啤酒與熟成牛排，小朋友享用現烤木爐披薩與義大利麵，空間極大可輕鬆容納7大桌。【☔ 雨天OK】" },
   { name: "安良波海灘 (Araha Beach) - 海盜船公園 (Day 1 主要行程)", category: "cafe", location: "北谷町 (距琉球之牛5分)", desc: "🏴‍☠️ 擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道！2 位小朋友極致放電首選。" },
   { name: "OKINAWA CERRADO COFFEE (港川 - Day 1 備案)", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。【☔ 雨天/買豆備案】" },
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
@@ -98,12 +101,10 @@ const gourmetData = [
   { name: "Craft House yacchi&moon (壺屋陶器街)", category: "naha", location: "那霸/壺屋", desc: "超人氣手作陶器餐具專賣店！經典盤子、馬克杯、熊熊器皿與文青擺飾。【☔ 雨天OK】" },
   { name: "AEON Style 超市 沖繩A5黑毛和牛", category: "yakiniku", location: "AEON Rycom", desc: "販售頂級沖繩A5黑毛和牛、石垣牛與阿古豬火鍋肉片，搭配日式火鍋高湯包於 BEB5 自煮。【☔ 雨天OK】" },
   { name: "A&W 美式漢堡 (PARCO CITY / 牧港店)", category: "naha", location: "浦添/那霸", desc: "沖繩美式漢堡始祖！必吃莫札瑞拉起司堡、捲捲薯條 (Curly Fries) 與免費續杯 Root Beer。【☔ 雨天OK】" },
-  { name: "Blue Seal 冰淇淋 (美國村 / 恩納店)", category: "cafe", location: "全沖繩", desc: "沖繩標誌性美式冰淇淋，必吃鹽金楚餅 (Salt Cookies)、紅芋 (Beni-imo) 與香檸 (Shikuwasa) 口味。【☔ 雨天OK】" },
+  { name: "Blue Seal 冰淇淋 (美國村店)", category: "cafe", location: "全沖繩", desc: "沖繩標誌性美式冰淇淋，必吃鹽金楚餅 (Salt Cookies)、紅芋 (Beni-imo) 與香檸 (Shikuwasa) 口味。【☔ 雨天OK】" },
   { name: "百年古家 大家 (Ufuya)", category: "soba", location: "名護市", desc: "百年琉球古民家，景觀庭園瀑布造景，阿古豬涮涮鍋與古家沖繩麵。【☔ 雨天OK】" },
   { name: "傑克牛排 (Jack's Steak)", category: "naha", location: "那霸市區", desc: "昭和風味美式牛排館，菲力牛排嫩口多汁，那霸在地人強烈推薦。【☔ 雨天OK】" },
-  { name: "幸福鬆餅 (A Happy Pancake)", category: "cafe", location: "瀨長島", desc: "極致鬆軟的舒芙蕾鬆餅，配上夕陽海景與飛機起降。" },
-  { name: "宮里麵 (Miyazato Soba)", category: "soba", location: "名護市", desc: "名護老字號沖繩麵，大塊爌肉軟嫩入味，CP值極高。【☔ 雨天OK】" },
-  { name: "Taco Rice Cafe Kijimuna", category: "naha", location: "美國村/瀨長島", desc: "沖繩經典料理塔可飯 (Taco Rice)，加入歐姆蛋滑嫩美味，小朋友愛吃。【☔ 雨天OK】" }
+  { name: "幸福鬆餅 (A Happy Pancake)", category: "cafe", location: "瀨長島", desc: "極致鬆軟的舒芙蕾鬆餅，配上夕陽海景與飛機起降。" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
