@@ -1,19 +1,22 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Araha Beach as Main Day 1 Afternoon)
+// Okinawa Travel Assistant - Application Logic (Updated Drive Times on Day 1)
 // ==========================================================================
 
 const itineraryData = {
   day1: {
     title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W) ➔ 🏴‍☠️ 安良波海灘(海盜船公園) ➔ 🥩 17:00 琉球之牛(北谷店) ➔ BEB5 Check-in",
-    theme: "✈️ 10:45 抵達沖繩 ➔ 🏴‍☠️ 下午主要行程：安良波海灘海盜船公園＆沙灘踩水（☕ 雨天/買豆備案：港川Cerrado咖啡） ➔ 🥩 17:00 琉球之牛(北谷店 #MR3Q6W) ➔ BEB5 入住",
+    theme: "✈️ 10:45 抵達沖繩 ➔ 🚗 20分車程 PARCO CITY A&W ➔ 🚗 25分車程 🏴‍☠️ 安良波海灘 ➔ 🚗 5分車程 🥩 17:00 琉球之牛 ➔ 🚗 40分車程 BEB5入住",
     timeline: [
       { time: "08:15 - 10:45", title: "搭乘華航 CI 120 班機 (TPE ➔ OKA)", desc: "桃園機場第一航廈起飛，10:45 準時抵達沖繩那霸機場 (OKA)。", tags: [{text: "✈️ 華航 CI 120", type: "drive"}] },
       { time: "10:45 - 12:00", title: "辦理入境、提領行李 & 領取 8人座油電 Alphard", desc: "提領行李，搭乘接駁車至 Toyota Rent a Car 領取 8人座油電 Alphard（2+3+3 配置）。7 位成員坐滿 7 個位置，第3排可單邊折疊收收（50/50分折），擺放 3~4 個大行李箱與推車。", tags: [{text: "🚗 領取8人座油電Alphard", type: "drive"}, {text: "✨ 3排可單邊收折放置行李", type: "kid"}] },
-      { time: "12:20 - 14:30", title: "☕ 上午咖啡＆美食：SAN-A PARCO CITY ＆ 【指定美食】A&W 漢堡", desc: "距機場僅 20 分鐘車程！於無敵海景美食街享用【A&W 美式漢堡】與特調晨間冰咖啡。全室內大型商場，雨天完全不受影響。", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ 晨間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "14:35 - 16:30", title: "🏴‍☠️ 下午主要行程：【安良波海灘 (Araha Beach)】（或 ☕ 雨天/買豆備案：港川 Cerrado 咖啡）", desc: "【主要行程】位於北谷町！擁有一比一巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道，適合 2 位小朋友戶外放電！（距離 17:00 琉球之牛北谷店僅 5 分鐘車程）\n💡【雨天/買豆備案】：OKINAWA CERRADO COFFEE @ 港川外人住宅街！1986 年創立老字號烘豆廠，室內品嚐精緻單品手沖，買特製濾掛包與 oHacorté 水果塔！", tags: [{text: "🏴‍☠️ 主要行程: 安良波海灘海盜船公園", type: "kid"}, {text: "🏖️ 沙灘踩水/放電", type: "kid"}, {text: "☕ 備案: 港川Cerrado手沖咖啡", type: "food"}, {text: "☔ 備案雨天OK", type: "rain-ok"}] },
+      { time: "12:00 - 12:20", title: "🚗 車程：取車完畢駛往 SAN-A PARCO CITY", desc: "自 Toyota 豐崎/機場門市出發，行經西海岸道路前往浦添 SAN-A PARCO CITY。（車程約 20 分鐘）", tags: [{text: "🚗 車程: 約20分", type: "drive"}] },
+      { time: "12:20 - 14:00", title: "🍔 ☕ 上午午餐＆咖啡：SAN-A PARCO CITY ＆ 【指定美食】A&W 漢堡", desc: "距租車處僅 20 分鐘車程！於無敵海景美食街享用【A&W 美式漢堡】與特調晨間冰咖啡。全室內大型商場，雨天完全不受影響。", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ 晨間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "14:00 - 14:30", title: "🚗 車程：PARCO CITY 出發駛往北谷安良波海灘", desc: "離開 PARCO CITY，沿國道 58 號海岸線北上駛往北谷町安良波海灘。（車程約 25~30 分鐘）", tags: [{text: "🚗 車程: 約25-30分", type: "drive"}] },
+      { time: "14:30 - 16:40", title: "🏴‍☠️ 下午主要行程：【安良波海灘 (Araha Beach)】（或 ☕ 雨天/買豆備案：港川 Cerrado 咖啡）", desc: "【主要行程】約 14:30 抵達北谷安良波海灘！擁有一比一巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道，讓 2 位小朋友暢玩 2 小時極致戶外放電！\n💡【雨天/買豆備案】：OKINAWA CERRADO COFFEE @ 港川外人住宅街！PARCO CITY 過去僅 5 分鐘，1986 年創立老字號烘豆廠，品嚐單品手沖，買特製濾掛包與 oHacorté 水果塔！（16:15 離開港川，行經國道 58 號開車約 30 分鐘於 16:45 抵達琉球之牛）", tags: [{text: "🏴‍☠️ 主要行程: 安良波海灘海盜船公園", type: "kid"}, {text: "🏖️ 沙灘踩水/放電2小時", type: "kid"}, {text: "☕ 備案: 港川Cerrado手沖咖啡", type: "food"}, {text: "☔ 備案雨天OK", type: "rain-ok"}] },
+      { time: "16:40 - 16:50", title: "🚗 車程：安良波海灘 ➔ 琉球之牛 北谷店", desc: "自安良波海灘出發前往琉球之牛北谷店。（僅 2 公里，車程約 5 分鐘！16:50 提早抵達輕鬆停車與預備入座）", tags: [{text: "🚗 超近車程: 僅5分鐘", type: "drive"}] },
       { time: "17:00 - 19:00", title: "🥩 晚餐：【琉球之牛 北谷店】已預約成功！(Confirmation # MR3Q6W)", desc: "【已訂位 17:00】距安良波海灘僅 5 分鐘車程！高級室內獨立燒肉包廂/桌席！品嚐頂級 A5 沖繩縣產黑毛和牛燒肉套餐與必點鎮店【炙燒和牛壽司】！", tags: [{text: "🥩 琉球之牛(北谷店)", type: "food"}, {text: "✅ 預約號#MR3Q6W", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "19:15 - 20:15", title: "晚餐後駛往恩納村【星野 BEB5 沖繩瀨良垣】辦理 Check-in", desc: "享用完極品燒肉大餐後，駕駛 Alphard 輕鬆行經國道出發前往恩納村。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
-      { time: "20:15 - 21:30", title: "🏨 星野 BEB5 沖繩瀨良垣 Check-in 入住 ＆ 開箱家庭套房", desc: "辦理 BEB5 入住手續，卸下行李。在室內 24h TAMARIBA Lounge 喝杯晚間咖啡/啤酒放鬆，早點休息迎接明日行程！", tags: [{text: "🏨 前4晚住宿據點", type: "drive"}, {text: "☕ TAMARIBA晚間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
+      { time: "19:00 - 19:40", title: "🚗 車程：北谷美濱區域 ➔ 恩納村【星野 BEB5 沖繩瀨良垣】", desc: "享用完極品燒肉大餐後，駕駛 Alphard 北上前往恩納村。（行經國道 58 號 / 高速公路，車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
+      { time: "19:40 - 21:00", title: "🏨 星野 BEB5 沖繩瀨良垣 Check-in 入住 ＆ 開箱家庭套房", desc: "約 19:40 抵達 BEB5 辦理入住手續，卸下行李。在室內 24h TAMARIBA Lounge 喝杯晚間咖啡/啤酒放鬆，早點休息迎接明日行程！", tags: [{text: "🏨 前4晚住宿據點", type: "drive"}, {text: "☕ TAMARIBA晚間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
     ]
   },
   day2: {
