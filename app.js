@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated Drive Times on Day 1)
+// Okinawa Travel Assistant - Application Logic (Updated Kouri Island Flow)
 // ==========================================================================
 
 const itineraryData = {
@@ -20,14 +20,17 @@ const itineraryData = {
     ]
   },
   day2: {
-    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ ☕ 古宇利島海景咖啡 ➔ 百年古家大家",
-    theme: "🥪 ☕ 上午：CAMEL 現做三明治/果昔/晨咖啡 ＆ 🐋 美麗海水族館 ＆ ☕ 下午：古宇利海景咖啡",
+    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ 🌊 古宇利島(大橋/蝦蝦飯/心形岩/海景咖啡) ➔ 🍲 百年古家大家",
+    theme: "🥪 ☕ 上流：CAMEL現做三明治＆果昔 ➔ 🐋 美麗海水族館 ➔ 🌊 古宇利島跨海大橋＆蝦蝦飯＆心形岩 ➔ 🍲 百年古家大家",
     timeline: [
       { time: "08:15 - 09:00", title: "BEB5 出發 ➔ 駛往本部町 (車程約 45 分鐘)", desc: "全家從小搭乘 Alphard 出發，沿美麗海岸線駛往水族館前方的本部町。", tags: [{text: "🚗 車程: 約45分", type: "drive"}] },
       { time: "09:00 - 10:00", title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE", desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！室內溫馨空間品嚐現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與香醇晨間冰拿鐵！", tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "10:15 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "距 CAMEL 僅 10 分鐘！世界級室內水族館，觀賞「黑潮之海」巨大水槽內鯨鯊與鬼蝠魟！海豚秀設有遮陽遮雨看台。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🐬 11:30海豚秀", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "14:30 - 16:30", title: "☕ 下午咖啡：古宇利島海景咖啡 (Kouri Shrimp / L Lota)", desc: "駛過跨越藍綠色大海的古宇利大橋，造訪【心形岩】沙灘踩水。於海景咖啡廳品嚐冰美式/手沖與蝦蝦飯。", tags: [{text: "☕ 古宇利海景咖啡", type: "food"}, {text: "🏖️ 沙灘踩水", type: "kid"}] },
-      { time: "17:30 - 19:30", title: "晚餐：名護 百年古家 大家 (Ufuya)", desc: "置身於 100 年歷史琉球古民家室內遮雨長廊與庭園瀑布景致中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
+      { time: "10:15 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "距 CAMEL 僅 10 分鐘！世界級室內水族館，觀賞「黑潮之海」巨大水槽內鯨鯊與鬼蝠魟！11:30 海豚秀設有遮陽遮雨看台。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🐬 11:30海豚秀", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "14:00 - 14:35", title: "🚗 車程：美麗海水族館 出發 ➔ 駛往【古宇利島】", desc: "自水族館出發，駛過全長 1,960 公尺的【古宇利大橋】，欣賞兩側絕美古宇利藍海景！（車程約 35 分鐘，可於橋頭南端短暫停靠拍照）", tags: [{text: "🚗 車程: 約35分", type: "drive"}, {text: "🌉 1960m 跨海大橋景觀", type: "kid"}] },
+      { time: "14:35 - 15:30", title: "🍤 ☕ 下午點心與咖啡：【Kouri Shrimp 蝦蝦飯】＆ 【L Lota / Awayk 海景咖啡】", desc: "抵達古宇利島！於 Kouri Shrimp 品嚐招牌蒜味奶油夏威夷蝦蝦飯，搭配 L Lota / Awayk 的特調冰美式與單品手沖，享受海景第一排涼爽下午茶。", tags: [{text: "🍤 Kouri Shrimp 蝦蝦飯", type: "food"}, {text: "☕ 古宇利海景手沖咖啡", type: "food"}] },
+      { time: "15:30 - 16:30", title: "🏖️ 🌊 景點巡禮與沙灘踩水：【心形岩 (Heart Rock)】或【古宇利海洋塔】", desc: "【戶外踩水首選】：漫步至 Ti-nu Beach 欣賞雙心形狀天然海蝕岩【心形岩】（嵐 JAL 廣告拍攝地），讓 2 位小朋友踩水玩沙！（Mapcode: 485 692 126*22）\n【雨天/長輩備案】：【古宇利海洋塔】搭乘自動駕駛高爾夫球車登頂，360 度無死角展望台與貝殼博物館（☔ 雨天 OK / 全室內無障礙）。", tags: [{text: "🏖️ 心形岩沙灘踩水", type: "kid"}, {text: "🛺 古宇利海洋塔(備案)", type: "kid"}, {text: "☔ 海洋塔雨天OK", type: "rain-ok"}] },
+      { time: "16:30 - 17:15", title: "🚗 車程：古宇利島 出發 ➔ 駛往名護【百年古家 大家】", desc: "離開古宇利島，開車駛往名護市山林間的【百年古家 大家】。（車程約 40~45 分鐘，17:15 提早抵達停車準備入座）", tags: [{text: "🚗 車程: 約40-45分", type: "drive"}] },
+      { time: "17:30 - 19:30", title: "🍲 晚餐：名護【百年古家 大家 (Ufuya)】", desc: "置身於 100 年歷史琉球古民家室內遮雨長廊與庭園瀑布景致中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
     ]
   },
   day3: {
@@ -84,6 +87,7 @@ const gourmetData = [
   { name: "安良波海灘 (Araha Beach) - 海盜船公園 (Day 1 主要行程)", category: "cafe", location: "北谷町 (距琉球之牛5分)", desc: "🏴‍☠️ 擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道！2 位小朋友極致放電首選。" },
   { name: "OKINAWA CERRADO COFFEE (港川 - Day 1 備案)", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。【☔ 雨天/買豆備案】" },
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
+  { name: "Kouri Shrimp 蝦蝦飯 (Day 2 下午點心)", category: "cafe", location: "古宇利島", desc: "🍤 招牌蒜味奶油夏威夷蝦蝦飯與特調飲品，二樓戶外陽台無敵古宇利藍海景。" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！【☔ 雨天OK】" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。【☔ 雨天OK】" },
@@ -94,7 +98,6 @@ const gourmetData = [
   { name: "Blue Seal 冰淇淋 (美國村 / 恩納店)", category: "cafe", location: "全沖繩", desc: "沖繩標誌性美式冰淇淋，必吃鹽金楚餅 (Salt Cookies)、紅芋 (Beni-imo) 與香檸 (Shikuwasa) 口味。【☔ 雨天OK】" },
   { name: "百年古家 大家 (Ufuya)", category: "soba", location: "名護市", desc: "百年琉球古民家，景觀庭園瀑布造景，阿古豬涮涮鍋與古家沖繩麵。【☔ 雨天OK】" },
   { name: "傑克牛排 (Jack's Steak)", category: "naha", location: "那霸市區", desc: "昭和風味美式牛排館，菲力牛排嫩口多汁，那霸在地人強烈推薦。【☔ 雨天OK】" },
-  { name: "Kouri Shrimp 蝦蝦飯", category: "cafe", location: "古宇利島", desc: "蒜味奶油蝦飯，配上夏威夷風情特調飲品，打卡必吃。" },
   { name: "幸福鬆餅 (A Happy Pancake)", category: "cafe", location: "瀨長島", desc: "極致鬆軟的舒芙蕾鬆餅，配上夕陽海景與飛機起降。" },
   { name: "宮里麵 (Miyazato Soba)", category: "soba", location: "名護市", desc: "名護老字號沖繩麵，大塊爌肉軟嫩入味，CP值極高。【☔ 雨天OK】" },
   { name: "Taco Rice Cafe Kijimuna", category: "naha", location: "美國村/瀨長島", desc: "沖繩經典料理塔可飯 (Taco Rice)，加入歐姆蛋滑嫩美味，小朋友愛吃。【☔ 雨天OK】" }
