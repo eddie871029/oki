@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with American Village Dining for 7)
+// Okinawa Travel Assistant - Application Logic (Updated with Day 2 Takeout Options)
 // ==========================================================================
 
 const itineraryData = {
@@ -20,8 +20,8 @@ const itineraryData = {
     ]
   },
   day2: {
-    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ 📸 古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯&Benny's Bowl ➔ 🏖️ 古宇利海灘踩水 ➔ 🍲 百年古家大家",
-    theme: "🥪 ☕ 上午：CAMEL現做三明治＆果昔 ➔ 🐋 美麗海水族館 ➔ 📸 本島側古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯＆Benny's Bowl ➔ 🏖️ 超順路古宇利海灘親子踩水 ➔ 🍲 百年古家大家",
+    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ 📸 大橋展望所 ➔ 🍤 蝦蝦飯&Benny's ➔ 🏖️ 海灘踩水 ➔ 🍲 大家 (或 🛍️ 順路外帶回BEB5)",
+    theme: "🥪 CAMEL早餐 ➔ 🐋水族館 ➔ 📸大橋展望 ➔ 🍤蝦蝦飯＆Benny's ➔ 🏖️古宇利海灘 ➔ 🍲大家 (或 🍱 順路外帶回飯店)",
     timeline: [
       { time: "08:15 - 09:00", title: "BEB5 出發 ➔ 駛往本部町 (車程約 45 分鐘)", desc: "全家從小搭乘 Alphard 出發，沿美麗海岸線駛往水族館前方的本部町。", tags: [{text: "🚗 車程: 約45分", type: "drive"}] },
       { time: "09:00 - 10:00", title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE", desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！室內溫馨空間品嚐現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與香醇晨間冰拿鐵！", tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
@@ -29,8 +29,7 @@ const itineraryData = {
       { time: "14:00 - 14:35", title: "📸 橋頭展望拍照點＆車程：【古宇利大橋南詰展望所】（屋我地島側 / 本島側）", desc: "自水族館出發（車程約 35 分鐘），在過橋進入古宇利島前，停靠位於屋我地島側的【古宇利大橋南詰展望所】（Mapcode: 485 601 893*22）！設有免費停車場與沙灘步道，下車拍整條大橋延伸入果凍海的無敵全景全家合照！拍攝後駛過 1,960 公尺古宇利大橋。", tags: [{text: "📸 古宇利大橋南詰展望所", type: "kid"}, {text: "🚗 車程: 約35分", type: "drive"}, {text: "🌉 1960m 大橋延伸全景", type: "kid"}] },
       { time: "14:35 - 15:30", title: "🍤 🥣 下午點心與果昔碗：【Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 鮮果巴西莓碗】", desc: "【同棟大樓一次享用！】Benny's 就位在 Kouri Shrimp 蝦蝦飯大樓的 1 樓（Kouri Shrimp 位於 2 樓）！全家可同時點 2 樓熱騰騰的【Kouri Shrimp 蒜味奶油夏威夷蝦蝦飯】與 1 樓 sister shop 的【Benny's Bowl 鮮果巴西莓碗 (Acai Bowl / 果昔碗)】，一同在二樓戶外海景陽台席或室內冷氣席享用，大人小孩讚不絕口！", tags: [{text: "🍤 Kouri Shrimp 蝦蝦飯", type: "food"}, {text: "🥣 Benny's Bowl 巴西莓碗(1F)", type: "food"}, {text: "🏖️ 海景陽台座位", type: "kid"}] },
       { time: "15:30 - 16:30", title: "🏖️ 🌊 超順路親子踩水玩沙：【古宇利海灘 (Kouri Beach)】（或 ☔ 雨天備案：古宇利海洋塔）", desc: "【超順路＆親子玩水首選！】自 Kouri Shrimp / Benny's 樓下步行 2 分鐘或開車即達跨海大橋下的【古宇利海灘 (Kouri Beach)】！海浪平緩、淺灘水質晶瑩澈透、細白沙灘，設有洗腳設施、沖洗室與無障礙步道，非常適合 2 位小朋友安全踩水玩沙、大人與長輩看海放鬆！\n💡【雨天/長輩備案】：【古宇利海洋塔】搭乘自動駕駛高爾夫球車登頂，360 度無死角展望台與貝殼博物館（☔ 雨天 OK / 全室內無障礙）。", tags: [{text: "🏖️ 超順路: 古宇利海灘踩水玩沙", type: "kid"}, {text: "🌊 浪平水淺/設施完善", type: "kid"}, {text: "🛺 古宇利海洋塔(備案)", type: "kid"}, {text: "☔ 海洋塔雨天OK", type: "rain-ok"}] },
-      { time: "16:30 - 17:15", title: "🚗 車程：古宇利島 出發 ➔ 駛往名護【百年古家 大家】", desc: "離開古宇利島，開車駛往名護市山林間的【百年古家 大家】。（車程約 40~45 分鐘，17:15 提早抵達停車準備入座）", tags: [{text: "🚗 車程: 約40-45分", type: "drive"}] },
-      { time: "17:30 - 19:30", title: "🍲 晚餐：名護【百年古家 大家 (Ufuya)】", desc: "置身於 100 年歷史琉球古民家室內遮雨長廊與庭園瀑布景致中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
+      { time: "16:30 - 17:30", title: "🚗 車程與晚餐選擇：名護【百年古家 大家】內用 或 🍱 順路外帶美食回 BEB5 飯店", desc: "【選項 A】：前往名護【百年古家 大家】享用阿古豬涮涮鍋晚餐。（須預約，17:30 入座）\n【選項 B (外帶回飯店放鬆)】：沿 58 號國道順路外帶回 BEB5 客房廚房享用，極度輕鬆不受拘束！\n🍱 順路外帶 4 大絕佳選擇：\n1. 🌮 King Tacos 名護店：沖繩塔可飯元祖！大盒裝起司牛肉塔可飯，放上車依然香噴噴！\n2. 🥩 燒肉乃我那霸 (名護店)：現做 A5 和牛與阿古豬排豪華便當盒，料大美味！\n3. 🍕 Pizzeria da ENZO (恩納村)：恩納村順路現烤窯烤披薩與義大利麵！\n4. 🛒 AEON 名護店超市：新鮮壽司拼盤、炸雞、串燒、水果大採購！", tags: [{text: "🍲 選項A: 百年古家大家內用", type: "food"}, {text: "🍱 選項B: 順路外帶回BEB5自煮享用", type: "food"}, {text: "🚗 沿58號國道極順路", type: "drive"}] }
     ]
   },
   day3: {
@@ -84,6 +83,10 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "King Tacos 名護店 (Day 2 順路外帶首選)", category: "cafe", location: "名護市 (國道58號旁)", desc: "🍱 沖繩塔可飯創始元祖！大盒裝經典起司牛肉塔可飯，份量極大，外帶回 BEB5 客房享用超正宗！" },
+  { name: "燒肉乃我那霸 名護店 (Day 2 外帶和牛/阿古豬便當)", category: "yakiniku", location: "名護市區", desc: "🥩 🍱 名護知名燒肉店特製「A5和牛燒肉便當」與「阿古豬排便當」，外帶回飯店配冷飲超滿足！" },
+  { name: "Pizzeria da ENZO 恩納村店 (Day 2 外帶窯烤披薩)", category: "cafe", location: "恩納村 (BEB5車程10分)", desc: "🍕 外帶現烤木爐披薩 (阿古豬香腸披薩、四種起司披薩) 與義大利麵！回 BEB5 TAMARIBA 享用極舒適。" },
+  { name: "AEON 名護店 超市熟食大採購 (Day 2 順路超市)", category: "yakiniku", location: "名護市國道旁", desc: "🛒 🍱 超大型超市！新鮮生魚片壽司拼盤、日式炸雞、燒鳥串燒、沖繩芒果與飲品大採購。" },
   { name: "Taco Rice Cafe Kijimuna (Depot Island 2F - 美國村親子首選)", category: "cafe", location: "美濱美國村 Depot Island 2F", desc: "🌮 沖繩經典「歐姆蛋塔可飯」(Omutaco)！滑嫩半熟歐姆蛋配上不辣起司與肉醬，小朋友超級愛吃！座位寬敞，位在 ZHYVAGO 樓上與煙火步道旁。【☔ 雨天OK】" },
   { name: "美濱迴轉壽司市場 (グルメ回転ずし市場 美浜店)", category: "cafe", location: "美濱美國村", desc: "🍣 超人氣迴轉壽司！大型寬敞沙發卡座極度適合 5大2小 7人用餐。新鮮大塊生魚片壽司、玉子燒、炸天婦羅與熱騰騰烏龍麵，大人小朋友都滿意。【☔ 雨天OK】" },
   { name: "Chatan Harbor Brewery & Restaurant", category: "cafe", location: "北谷港邊 (美國村周邊)", desc: "🍺 🍕 極致寬敞的港灣海景餐廳！大人享受特製黑潮精釀啤酒與熟成牛排，小朋友享用現烤木爐披薩與義大利麵，空間極大可輕鬆容納7大桌。【☔ 雨天OK】" },
