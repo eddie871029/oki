@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Kouri Beach)
+// Okinawa Travel Assistant - Application Logic (Updated with Satchan Soba)
 // ==========================================================================
 
 const itineraryData = {
@@ -34,11 +34,11 @@ const itineraryData = {
     ]
   },
   day3: {
-    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 晚上8點煙火！",
-    theme: "☕ 上午：鳳梨冷萃 ＆ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ＆ ☕ 晚上：ZHYVAGO 🎆 20:00煙火",
+    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 🍜 Satchan Soba ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 晚上8點煙火！",
+    theme: "☕ 上午：鳳梨冷萃 ➔ 🍜 名護 Satchan Soba ➔ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ➔ ☕ 晚上：ZHYVAGO 🎆 20:00煙火",
     timeline: [
       { time: "10:00 - 12:30", title: "☕ 上午咖啡：名護鳳梨園 (Pineapple Park) 特調冷萃咖啡", desc: "【雨天超完美景點】搭乘全遮雨防雨設施的自動駕駛「鳳梨遊覽車」穿梭熱帶植物園區，室內熱帶溫室與鳳梨試飲品嚐區，享用鳳梨冷萃咖啡！", tags: [{text: "🍍 自動駕駛鳳梨車", type: "kid"}, {text: "☕ 鳳梨冷萃咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "12:30 - 13:30", title: "午餐：宮里麵 (Miyazato Soba) / 岸本食堂", desc: "名護在地人極力推薦的老字號室內沖繩麵店，大塊滷五花肉與軟骨排骨，湯頭鮮美，價格平實。", tags: [{text: "🍜 傳統沖繩麵", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "12:30 - 13:30", title: "🍜 午餐：名護人氣名店【Satchan Soba (幸ちゃんそば)】（或 宮里麵）", desc: "名護極具盛名的在地人氣沖繩麵！濃郁醇厚的家常高湯、Q彈手工麵條與燉煮至極致軟嫩的軟骨排骨(Soki)與三層肉！亦有特製艾草麵條可選，室內舒適冷氣席。（☔ 雨天 OK）", tags: [{text: "🍜 Satchan Soba (幸ちゃんそば)", type: "food"}, {text: "🥩 軟骨排骨沖繩麵", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "14:00 - 15:00", title: "萬座毛觀景台 (Manzamo)", desc: "欣賞天然雕琢的象鼻形狀琉球石灰岩斷崖，走訪全新建成的無障礙景觀步道。（戶外景點）", tags: [{text: "🚗 車程: 約30分", type: "drive"}, {text: "🐘 象鼻岩景致", type: "kid"}] },
       { time: "15:30 - 17:30", title: "☕ 下午咖啡：【RYUKYU BEACH CLUB (琉球海灘俱樂部)】海景第一排沙發咖啡廳", desc: "位於恩納村瀨良垣海濱！全開放式海景第一排戶外沙發席，品嚐冰拿鐵、特調飲品與巴西莓碗，看海聽浪。", tags: [{text: "☕ RYUKYU BEACH CLUB", type: "food"}, {text: "🏖️ 瀨良垣海景沙發", type: "kid"}] },
       { time: "18:00 - 19:45", title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】@ 美國村", desc: "美濱美國村 Depot Island！室內重工業美式海景烘豆廠，喝極品手沖/冰拿鐵，買美式復古包裝咖啡豆！美國村多數商場設有遮雨拱廊步道。", tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🛍️ 買美式復古豆", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
@@ -87,6 +87,7 @@ const gourmetData = [
   { name: "安良波海灘 (Araha Beach) - 海盜船公園 (Day 1 主要行程)", category: "cafe", location: "北谷町 (距琉球之牛5分)", desc: "🏴‍☠️ 擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道！2 位小朋友極致放電首選。" },
   { name: "OKINAWA CERRADO COFFEE (港川 - Day 1 備案)", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。【☔ 雨天/買豆備案】" },
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
+  { name: "Satchan Soba (幸ちゃんそば - Day 3 午餐)", category: "soba", location: "名護市", desc: "🍜 名護人氣極高的在地沖繩麵！家常燉煮軟骨排骨(Soki)與軟嫩三層肉，提供特製艾草麵條選項。【☔ 雨天OK】" },
   { name: "古宇利大橋南詰展望所 (Day 2 拍照勝地)", category: "cafe", location: "屋我地島 (本島側橋頭)", desc: "📸 拍攝古宇利大橋延伸入果凍海絕景的頂級拍照展望點！免費停車場，有沙灘步道。" },
   { name: "Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 巴西莓碗 (Day 2)", category: "cafe", location: "古宇利島", desc: "🍤 🥣 同棟大樓！2 樓為蒜味奶油夏威夷蝦蝦飯，1 樓為 sister shop【Benny's】鮮果巴西莓碗 (Acai Bowl)，二樓海景陽台一同享用。" },
   { name: "古宇利海灘 (Kouri Beach - Day 2 超順路踩水)", category: "cafe", location: "古宇利大橋下", desc: "🏖️ 浪平水淺、細白沙灘、洗腳與沖洗設施齊全！位在蝦蝦飯樓下，2位小朋友踩水玩沙首選。" },
