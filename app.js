@@ -1,5 +1,5 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Kouri Bridge Viewpoint)
+// Okinawa Travel Assistant - Application Logic (Updated with Kouri Beach)
 // ==========================================================================
 
 const itineraryData = {
@@ -20,15 +20,15 @@ const itineraryData = {
     ]
   },
   day2: {
-    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ 📸 古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯&Benny's Bowl ➔ 🍲 百年古家大家",
-    theme: "🥪 ☕ 上午：CAMEL現做三明治＆果昔 ➔ 🐋 美麗海水族館 ➔ 📸 本島側古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯＆Benny's Bowl ➔ 🍲 百年古家大家",
+    title: "Day 2 (9/4 週五)：☕ CAMEL 早餐 ➔ 🐋 美麗海水族館 ➔ 📸 古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯&Benny's Bowl ➔ 🏖️ 古宇利海灘踩水 ➔ 🍲 百年古家大家",
+    theme: "🥪 ☕ 上午：CAMEL現做三明治＆果昔 ➔ 🐋 美麗海水族館 ➔ 📸 本島側古宇利大橋南詰展望所 ➔ 🍤 蝦蝦飯＆Benny's Bowl ➔ 🏖️ 超順路古宇利海灘親子踩水 ➔ 🍲 百年古家大家",
     timeline: [
       { time: "08:15 - 09:00", title: "BEB5 出發 ➔ 駛往本部町 (車程約 45 分鐘)", desc: "全家從小搭乘 Alphard 出發，沿美麗海岸線駛往水族館前方的本部町。", tags: [{text: "🚗 車程: 約45分", type: "drive"}] },
       { time: "09:00 - 10:00", title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE", desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！室內溫馨空間品嚐現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與香醇晨間冰拿鐵！", tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "10:15 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "距 CAMEL 僅 10 分鐘！世界級室內水族館，觀賞「黑潮之海」巨大水槽內鯨鯊與鬼蝠魟！11:30 海豚秀設有遮陽遮雨看台。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🐬 11:30海豚秀", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "14:00 - 14:35", title: "📸 橋頭展望拍照點＆車程：【古宇利大橋南詰展望所】（屋我地島側 / 本島側）", desc: "自水族館出發（車程約 35 分鐘），在過橋進入古宇利島前，停靠位於屋我地島側的【古宇利大橋南詰展望所】（Mapcode: 485 601 893*22）！設有免費停車場與沙灘步道，下車拍整條大橋延伸入果凍海的無敵全景全家合照！拍攝後駛過 1,960 公尺古宇利大橋。", tags: [{text: "📸 古宇利大橋南詰展望所", type: "kid"}, {text: "🚗 車程: 約35分", type: "drive"}, {text: "🌉 1960m 大橋延伸全景", type: "kid"}] },
       { time: "14:35 - 15:30", title: "🍤 🥣 下午點心與果昔碗：【Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 鮮果巴西莓碗】", desc: "【同棟大樓一次享用！】Benny's 就位在 Kouri Shrimp 蝦蝦飯大樓的 1 樓（Kouri Shrimp 位於 2 樓）！全家可同時點 2 樓熱騰騰的【Kouri Shrimp 蒜味奶油夏威夷蝦蝦飯】與 1 樓 sister shop 的【Benny's Bowl 鮮果巴西莓碗 (Acai Bowl / 果昔碗)】，一同在二樓戶外海景陽台席或室內冷氣席享用，大人小孩讚不絕口！", tags: [{text: "🍤 Kouri Shrimp 蝦蝦飯", type: "food"}, {text: "🥣 Benny's Bowl 巴西莓碗(1F)", type: "food"}, {text: "🏖️ 海景陽台座位", type: "kid"}] },
-      { time: "15:30 - 16:30", title: "🏖️ 🌊 景點巡禮與沙灘踩水：【心形岩 (Heart Rock)】或【古宇利海洋塔】", desc: "【戶外踩水首選】：漫步至 Ti-nu Beach 欣賞雙心形狀天然海蝕岩【心形岩】（嵐 JAL 廣告拍攝地），讓 2 位小朋友踩水玩沙！（Mapcode: 485 692 126*22）\n【雨天/長輩備案】：【古宇利海洋塔】搭乘自動駕駛高爾夫球車登頂，360 度無死角展望台與貝殼博物館（☔ 雨天 OK / 全室內無障礙）。", tags: [{text: "🏖️ 心形岩沙灘踩水", type: "kid"}, {text: "🛺 古宇利海洋塔(備案)", type: "kid"}, {text: "☔ 海洋塔雨天OK", type: "rain-ok"}] },
+      { time: "15:30 - 16:30", title: "🏖️ 🌊 超順路親子踩水玩沙：【古宇利海灘 (Kouri Beach)】（或 ☔ 雨天備案：古宇利海洋塔）", desc: "【超順路＆親子玩水首選！】自 Kouri Shrimp / Benny's 樓下步行 2 分鐘或開車即達跨海大橋下的【古宇利海灘 (Kouri Beach)】！海浪平緩、淺灘水質晶瑩澈透、細白沙灘，設有洗腳設施、沖洗室與無障礙步道，非常適合 2 位小朋友安全踩水玩沙、大人與長輩看海放鬆！\n💡【雨天/長輩備案】：【古宇利海洋塔】搭乘自動駕駛高爾夫球車登頂，360 度無死角展望台與貝殼博物館（☔ 雨天 OK / 全室內無障礙）。", tags: [{text: "🏖️ 超順路: 古宇利海灘踩水玩沙", type: "kid"}, {text: "🌊 浪平水淺/設施完善", type: "kid"}, {text: "🛺 古宇利海洋塔(備案)", type: "kid"}, {text: "☔ 海洋塔雨天OK", type: "rain-ok"}] },
       { time: "16:30 - 17:15", title: "🚗 車程：古宇利島 出發 ➔ 駛往名護【百年古家 大家】", desc: "離開古宇利島，開車駛往名護市山林間的【百年古家 大家】。（車程約 40~45 分鐘，17:15 提早抵達停車準備入座）", tags: [{text: "🚗 車程: 約40-45分", type: "drive"}] },
       { time: "17:30 - 19:30", title: "🍲 晚餐：名護【百年古家 大家 (Ufuya)】", desc: "置身於 100 年歷史琉球古民家室內遮雨長廊與庭園瀑布景致中，享用極致鮮美的阿古豬涮涮鍋。（須預約）", tags: [{text: "🍲 阿古豬涮涮鍋", type: "food"}, {text: "🏯 百年古宅造景", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
     ]
@@ -89,6 +89,7 @@ const gourmetData = [
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
   { name: "古宇利大橋南詰展望所 (Day 2 拍照勝地)", category: "cafe", location: "屋我地島 (本島側橋頭)", desc: "📸 拍攝古宇利大橋延伸入果凍海絕景的頂級拍照展望點！免費停車場，有沙灘步道。" },
   { name: "Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 巴西莓碗 (Day 2)", category: "cafe", location: "古宇利島", desc: "🍤 🥣 同棟大樓！2 樓為蒜味奶油夏威夷蝦蝦飯，1 樓為 sister shop【Benny's】鮮果巴西莓碗 (Acai Bowl)，二樓海景陽台一同享用。" },
+  { name: "古宇利海灘 (Kouri Beach - Day 2 超順路踩水)", category: "cafe", location: "古宇利大橋下", desc: "🏖️ 浪平水淺、細白沙灘、洗腳與沖洗設施齊全！位在蝦蝦飯樓下，2位小朋友踩水玩沙首選。" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！【☔ 雨天OK】" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。【☔ 雨天OK】" },
