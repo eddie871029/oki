@@ -1,18 +1,18 @@
 // ==========================================================================
-// Okinawa Travel Assistant - Application Logic (Updated with Day 2 Takeout Options)
+// Okinawa Travel Assistant - Application Logic (Updated with CERRADO COFFEE 1F Location)
 // ==========================================================================
 
 const itineraryData = {
   day1: {
-    title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W) ➔ 🏴‍☠️ 安良波海灘(海盜船公園) ➔ 🥩 17:00 琉球之牛(北谷店) ➔ BEB5 Check-in",
-    theme: "✈️ 10:45 抵達沖繩 ➔ 🚗 20分車程 PARCO CITY A&W ➔ 🚗 25分車程 🏴‍☠️ 安良波海灘 ➔ 🚗 5分車程 🥩 17:00 琉球之牛 ➔ 🚗 40分車程 BEB5入住",
+    title: "Day 1 (9/3 週四)：華航 CI 120 ➔ 領取 Alphard ➔ PARCO CITY (A&W / ☕ CERRADO COFFEE 1F) ➔ 🏴‍☠️ 安良波海灘 ➔ 🥩 17:00 琉球之牛 ➔ BEB5",
+    theme: "✈️ 10:45 抵達沖繩 ➔ 🚗 20分車程 PARCO CITY A&W ＆ CERRADO 1F ➔ 🚗 25分車程 🏴‍☠️ 安良波海灘 ➔ 🥩 17:00 琉球之牛 ➔ BEB5入住",
     timeline: [
       { time: "08:15 - 10:45", title: "搭乘華航 CI 120 班機 (TPE ➔ OKA)", desc: "桃園機場第一航廈起飛，10:45 準時抵達沖繩那霸機場 (OKA)。", tags: [{text: "✈️ 華航 CI 120", type: "drive"}] },
       { time: "10:45 - 12:00", title: "辦理入境、提領行李 & 領取 8人座油電 Alphard", desc: "提領行李，搭乘接駁車至 Toyota Rent a Car 領取 8人座油電 Alphard（2+3+3 配置）。7 位成員坐滿 7 個位置，第3排可單邊折疊收收（50/50分折），擺放 3~4 個大行李箱與推車。", tags: [{text: "🚗 領取8人座油電Alphard", type: "drive"}, {text: "✨ 3排可單邊收折放置行李", type: "kid"}] },
       { time: "12:00 - 12:20", title: "🚗 車程：取車完畢駛往 SAN-A PARCO CITY", desc: "自 Toyota 豐崎/機場門市出發，行經西海岸道路前往浦添 SAN-A PARCO CITY。（車程約 20 分鐘）", tags: [{text: "🚗 車程: 約20分", type: "drive"}] },
-      { time: "12:20 - 14:00", title: "🍔 ☕ 上午午餐＆咖啡：SAN-A PARCO CITY ＆ 【指定美食】A&W 漢堡", desc: "距租車處僅 20 分鐘車程！於無敵海景美食街享用【A&W 美式漢堡】與特調晨間冰咖啡。全室內大型商場，雨天完全不受影響。", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ 晨間咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { time: "12:20 - 14:00", title: "🍔 ☕ 上午午餐＆咖啡：SAN-A PARCO CITY ＆ A&W 漢堡 ＆ ☕ CERRADO COFFEE (1F 橘區)", desc: "距租車處僅 20 分鐘車程！於海景美食街享用【A&W 美式漢堡】！\n☕ **【CERRADO COFFEE BeansStore 分店】位在 PARCO CITY 1 樓（1F 橘區 Orange Zone）**！可順道購買老字號單品手沖咖啡、義式咖啡外帶與優質咖啡豆！", tags: [{text: "🍔 A&W美式漢堡", type: "food"}, {text: "☕ CERRADO COFFEE (1F 橘區)", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "14:00 - 14:30", title: "🚗 車程：PARCO CITY 出發駛往北谷安良波海灘", desc: "離開 PARCO CITY，沿國道 58 號海岸線北上駛往北谷町安良波海灘。（車程約 25~30 分鐘）", tags: [{text: "🚗 車程: 約25-30分", type: "drive"}] },
-      { time: "14:30 - 16:40", title: "🏴‍☠️ 下午主要行程：【安良波海灘 (Araha Beach)】（或 ☕ 雨天/買豆備案：港川 Cerrado 咖啡）", desc: "【主要行程】約 14:30 抵達北谷安良波海灘！擁有一比一巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道，讓 2 位小朋友暢玩 2 小時極致戶外放電！\n💡【雨天/買豆備案】：OKINAWA CERRADO COFFEE @ 港川外人住宅街！PARCO CITY 過去僅 5 分鐘，1986 年創立老字號烘豆廠，品嚐單品手沖，買特製濾掛包與 oHacorté 水果塔！（16:15 離開港川，行經國道 58 號開車約 30 分鐘於 16:45 抵達琉球之牛）", tags: [{text: "🏴‍☠️ 主要行程: 安良波海灘海盜船公園", type: "kid"}, {text: "🏖️ 沙灘踩水/放電2小時", type: "kid"}, {text: "☕ 備案: 港川Cerrado手沖咖啡", type: "food"}, {text: "☔ 備案雨天OK", type: "rain-ok"}] },
+      { time: "14:30 - 16:40", title: "🏴‍☠️ 下午主要行程：【安良波海灘 (Araha Beach)】（或 ☕ 雨天/港川總店備案）", desc: "【主要行程】約 14:30 抵達北谷安良波海灘！擁有一比一巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道，讓 2 位小朋友暢玩 2 小時極致戶外放電！\n💡【雨天/港川總店備案】：OKINAWA CERRADO COFFEE 港川外人住宅總店（品嚐老字號手沖、買濾掛包與 oHacorté 水果塔，16:15 離開港川前往琉球之牛）。", tags: [{text: "🏴‍☠️ 主要行程: 安良波海灘海盜船公園", type: "kid"}, {text: "🏖️ 沙灘踩水/放電2小時", type: "kid"}, {text: "☕ 備案: 港川Cerrado總店手沖", type: "food"}, {text: "☔ 備案雨天OK", type: "rain-ok"}] },
       { time: "16:40 - 16:50", title: "🚗 車程：安良波海灘 ➔ 琉球之牛 北谷店", desc: "自安良波海灘出發前往琉球之牛北谷店。（僅 2 公里，車程約 5 分鐘！16:50 提早抵達輕鬆停車與預備入座）", tags: [{text: "🚗 超近車程: 僅5分鐘", type: "drive"}] },
       { time: "17:00 - 19:00", title: "🥩 晚餐：【琉球之牛 北谷店】已預約成功！(Confirmation # MR3Q6W)", desc: "【已訂位 17:00】距安良波海灘僅 5 分鐘車程！高級室內獨立燒肉包廂/桌席！品嚐頂級 A5 沖繩縣產黑毛和牛燒肉套餐與必點鎮店【炙燒和牛壽司】！", tags: [{text: "🥩 琉球之牛(北谷店)", type: "food"}, {text: "✅ 預約號#MR3Q6W", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "19:00 - 19:40", title: "🚗 車程：北谷美濱區域 ➔ 恩納村【星野 BEB5 沖繩瀨良垣】", desc: "享用完極品燒肉大餐後，駕駛 Alphard 北上前往恩納村。（行經國道 58 號 / 高速公路，車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
@@ -83,6 +83,7 @@ const itineraryData = {
 };
 
 const gourmetData = [
+  { name: "OKINAWA CERRADO COFFEE BeansStore (PARCO CITY 1F 橘區)", category: "cafe", location: "SAN-A PARCO CITY 1F Orange Zone", desc: "☕ 老字號烘豆廠分店！位在 PARCO CITY 1 樓橘區，提供單品手沖、外帶義式咖啡、特製濾掛包與精品豆！【☔ 雨天OK】" },
   { name: "King Tacos 名護店 (Day 2 順路外帶首選)", category: "cafe", location: "名護市 (國道58號旁)", desc: "🍱 沖繩塔可飯創始元祖！大盒裝經典起司牛肉塔可飯，份量極大，外帶回 BEB5 客房享用超正宗！" },
   { name: "燒肉乃我那霸 名護店 (Day 2 外帶和牛/阿古豬便當)", category: "yakiniku", location: "名護市區", desc: "🥩 🍱 名護知名燒肉店特製「A5和牛燒肉便當」與「阿古豬排便當」，外帶回飯店配冷飲超滿足！" },
   { name: "Pizzeria da ENZO 恩納村店 (Day 2 外帶窯烤披薩)", category: "cafe", location: "恩納村 (BEB5車程10分)", desc: "🍕 外帶現烤木爐披薩 (阿古豬香腸披薩、四種起司披薩) 與義大利麵！回 BEB5 TAMARIBA 享用極舒適。" },
@@ -91,7 +92,7 @@ const gourmetData = [
   { name: "美濱迴轉壽司市場 (グルメ回転ずし市場 美浜店)", category: "cafe", location: "美濱美國村", desc: "🍣 超人氣迴轉壽司！大型寬敞沙發卡座極度適合 5大2小 7人用餐。新鮮大塊生魚片壽司、玉子燒、炸天婦羅與熱騰騰烏龍麵，大人小朋友都滿意。【☔ 雨天OK】" },
   { name: "Chatan Harbor Brewery & Restaurant", category: "cafe", location: "北谷港邊 (美國村周邊)", desc: "🍺 🍕 極致寬敞的港灣海景餐廳！大人享受特製黑潮精釀啤酒與熟成牛排，小朋友享用現烤木爐披薩與義大利麵，空間極大可輕鬆容納7大桌。【☔ 雨天OK】" },
   { name: "安良波海灘 (Araha Beach) - 海盜船公園 (Day 1 主要行程)", category: "cafe", location: "北谷町 (距琉球之牛5分)", desc: "🏴‍☠️ 擁有巨大「印度洋號木製海盜船遊樂設施」、白沙灘踩水與海濱步道！2 位小朋友極致放電首選。" },
-  { name: "OKINAWA CERRADO COFFEE (港川 - Day 1 備案)", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。【☔ 雨天/買豆備案】" },
+  { name: "OKINAWA CERRADO COFFEE (港川總店 - Day 1 備案)", category: "cafe", location: "港川外人住宅街", desc: "☕ 創立於 1986 年老字號文青烘豆廠，白色小木屋風格，精緻單品手沖與特製濾掛包。【☔ 雨天/買豆備案】" },
   { name: "CAMEL SANDWICH & SMOOTHIE (Day 2 專屬早餐)", category: "cafe", location: "本部町 (距水族館10分)", desc: "🥪 沖繩超人氣現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與晨間香醇冰拿鐵！【☔ 雨天OK】" },
   { name: "Satchan Soba (幸ちゃんそば - Day 3 午餐)", category: "soba", location: "名護市", desc: "🍜 名護人氣極高的在地沖繩麵！家常燉煮軟骨排骨(Soki)與軟嫩三層肉，提供特製艾草麵條選項。【☔ 雨天OK】" },
   { name: "古宇利大橋南詰展望所 (Day 2 拍照勝地)", category: "cafe", location: "屋我地島 (本島側橋頭)", desc: "📸 拍攝古宇利大橋延伸入果凍海絕景的頂級拍照展望點！免費停車場，有沙灘步道。" },
