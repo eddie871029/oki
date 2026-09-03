@@ -24,7 +24,93 @@ const itineraryData = {
     theme: "🥪 CAMEL早餐 ➔ 🐋水族館 ➔ 📸大橋展望 ➔ 🍤蝦蝦飯＆Benny's ➔ 🏖️古宇利海灘 ➔ 🍲大家 (或 🍱 順路外帶回飯店)",
     timeline: [
       { time: "08:15 - 09:00", title: "BEB5 出發 ➔ 駛往本部町 (車程約 45 分鐘)", desc: "全家從小搭乘 Alphard 出發，沿美麗海岸線駛往水族館前方的本部町。", tags: [{text: "🚗 車程: 約45分", type: "drive"}] },
-      { time: "09:00 - 10:00", title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE", desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！室內溫馨空間品嚐現做熱壓三明治 (BLT/西西里羅勒雞肉)、現打黑糖香蕉/阿薩伊果昔與香醇晨間冰拿鐵！", tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { 
+        time: "09:00 - 10:00", 
+        title: "🥪 ☕ 【指定早餐＆晨間咖啡】CAMEL SANDWICH & SMOOTHIE（附中文菜單與圖片）", 
+        desc: "【Day 2 專屬早餐】距離水族館僅 10 分鐘！室內溫馨空間品嚐現做熱壓三明治、現打黑糖香蕉/紅芋果昔與香醇晨間冰拿鐵！", 
+        extraHtml: `
+          <div class="menu-embed-box">
+            <div class="menu-embed-header">
+              <h4>🥪 CAMEL SANDWICH & SMOOTHIE 實體中文菜單</h4>
+              <span class="tag food">現點現做・熱壓三明治</span>
+            </div>
+            <div class="menu-embed-layout">
+              <div class="menu-photo-card">
+                <a href="camel_menu.png" target="_blank" title="點擊查看完整菜單原圖">
+                  <img src="camel_menu.png" alt="CAMEL 實體中文菜單圖片">
+                </a>
+                <div class="menu-photo-tag">🔍 點擊圖片可放大查看</div>
+              </div>
+              <div class="menu-items-table">
+                <div class="menu-item-row">
+                  <div class="menu-item-top">
+                    <div class="menu-item-name">🥓 SPAM 午餐肉起司煎蛋三明治 <span class="menu-item-jp">スパムエッグ</span></div>
+                    <div class="menu-item-price-main">¥900</div>
+                  </div>
+                  <div class="menu-item-desc">厚切香煎 SPAM 火腿 ＋ 滑嫩煎蛋 ＋ 起司 ＋ 脆生菜（沖繩靈魂美味，小孩最愛）</div>
+                  <div class="menu-item-sets">
+                    <span class="set-pill">🍟 附薯條+飲料 ¥1,200</span>
+                    <span class="set-pill smoothie">🥤 附薯條+果昔 ¥1,450</span>
+                  </div>
+                </div>
+
+                <div class="menu-item-row">
+                  <div class="menu-item-top">
+                    <div class="menu-item-name">🍗 日式照燒雞肉三明治 <span class="menu-item-jp">テリヤキチキン</span></div>
+                    <div class="menu-item-price-main">¥850</div>
+                  </div>
+                  <div class="menu-item-desc">鮮嫩多汁照燒雞腿肉 ＋ 溏心荷包蛋 ＋ 鮮綠生菜（鹹甜適中開胃好入口）</div>
+                  <div class="menu-item-sets">
+                    <span class="set-pill">🍟 附薯條+飲料 ¥1,150</span>
+                    <span class="set-pill smoothie">🥤 附薯條+果昔 ¥1,400</span>
+                  </div>
+                </div>
+
+                <div class="menu-item-row">
+                  <div class="menu-item-top">
+                    <div class="menu-item-name">🐖 慢燉手撕豬肉三明治 <span class="menu-item-jp">プルドポーク</span></div>
+                    <div class="menu-item-price-main">¥1,000</div>
+                  </div>
+                  <div class="menu-item-desc">低溫慢烤手撕豬肉 ＋ 特調美式 BBQ 醬 ＋ 熔岩起司（肉香濃郁）</div>
+                  <div class="menu-item-sets">
+                    <span class="set-pill">🍟 附薯條+飲料 ¥1,300</span>
+                    <span class="set-pill smoothie">🥤 附薯條+果昔 ¥1,550</span>
+                  </div>
+                </div>
+
+                <div class="menu-item-row">
+                  <div class="menu-item-top">
+                    <div class="menu-item-name">🥩 費城牛肉起司三明治 <span class="menu-item-jp">フィリーチーズ</span></div>
+                    <div class="menu-item-price-main">¥950</div>
+                  </div>
+                  <div class="menu-item-desc">切片牛肉炒洋蔥 ＋ 爆漿融化起司（經典美式 Philly Cheese 口感扎實）</div>
+                  <div class="menu-item-sets">
+                    <span class="set-pill">🍟 附薯條+飲料 ¥1,250</span>
+                    <span class="set-pill smoothie">🥤 附薯條+果昔 ¥1,500</span>
+                  </div>
+                </div>
+
+                <div class="menu-item-row" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.08);">
+                  <div class="menu-item-top">
+                    <div class="menu-item-name">🎁 三明治綜合分享盒 <span class="menu-item-jp">サンドボックス (自選3款)</span></div>
+                    <div class="menu-item-price-main">¥2,800</div>
+                  </div>
+                  <div class="menu-item-desc">任選 3 種不同口味三明治（不可重複），切塊漂亮盒裝，5大2小分食首選！</div>
+                  <div class="menu-item-sets">
+                    <span class="set-pill">🍟 附薯條+飲料 ¥3,700</span>
+                    <span class="set-pill smoothie">🥤 附薯條+果昔 ¥4,500</span>
+                  </div>
+                </div>
+
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 6px;">
+                  💡 <strong>現打果昔推薦</strong>：黑糖香蕉果昔、紅芋香蕉果昔、Oreo 巧克力香蕉果昔！
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        tags: [{text: "🥪 CAMEL三明治", type: "food"}, {text: "🥤 現打果昔與晨咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}, {text: "📋 附完整中文菜單", type: "food"}] 
+      },
       { time: "10:15 - 14:00", title: "沖繩美麗海水族館 (Churaumi)", desc: "距 CAMEL 僅 10 分鐘！世界級室內水族館，觀賞「黑潮之海」巨大水槽內鯨鯊與鬼蝠魟！11:30 海豚秀設有遮陽遮雨看台。", tags: [{text: "🐋 鯨鯊與海豚秀", type: "kid"}, {text: "🐬 11:30海豚秀", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "14:00 - 14:35", title: "📸 橋頭展望拍照點＆車程：【古宇利大橋南詰展望所】（屋我地島側 / 本島側）", desc: "自水族館出發（車程約 35 分鐘），在過橋進入古宇利島前，停靠位於屋我地島側的【古宇利大橋南詰展望所】（Mapcode: 485 601 893*22）！設有免費停車場與沙灘步道，下車拍整條大橋延伸入果凍海的無敵全景全家合照！拍攝後駛過 1,960 公尺古宇利大橋。", tags: [{text: "📸 古宇利大橋南詰展望所", type: "kid"}, {text: "🚗 車程: 約35分", type: "drive"}, {text: "🌉 1960m 大橋延伸全景", type: "kid"}] },
       { time: "14:35 - 15:30", title: "🍤 🥣 下午點心與果昔碗：【Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 鮮果巴西莓碗】", desc: "【同棟大樓一次享用！】Benny's 就位在 Kouri Shrimp 蝦蝦飯大樓的 1 樓（Kouri Shrimp 位於 2 樓）！全家可同時點 2 樓熱騰騰的【Kouri Shrimp 蒜味奶油夏威夷蝦蝦飯】與 1 樓 sister shop 的【Benny's Bowl 鮮果巴西莓碗 (Acai Bowl / 果昔碗)】，一同在二樓戶外海景陽台席或室內冷氣席享用，大人小孩讚不絕口！", tags: [{text: "🍤 Kouri Shrimp 蝦蝦飯", type: "food"}, {text: "🥣 Benny's Bowl 巴西莓碗(1F)", type: "food"}, {text: "🏖️ 海景陽台座位", type: "kid"}] },
@@ -153,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="timeline-time">${item.time}</div>
           <div class="timeline-title">${item.title}</div>
           <div class="timeline-desc" style="white-space: pre-line;">${item.desc}</div>
+          ${item.extraHtml ? item.extraHtml : ''}
           <div class="tag-list">${tagsHtml}</div>
         </div>
       `;
