@@ -119,15 +119,69 @@ const itineraryData = {
     ]
   },
   day3: {
-    title: "Day 3 (9/5 週六)：鳳梨園 ➔ 🍜 Satchan Soba ➔ 萬座毛 ➔ ☕ RYUKYU BEACH CLUB ➔ 美國村 ☕ ZHYVAGO 🎆 20:00煙火！",
-    theme: "☕ 上午：鳳梨冷萃 ➔ 🍜 名護 Satchan Soba ➔ ☕ 下午：RYUKYU BEACH CLUB沙發海景 ➔ ☕ 晚間：ZHYVAGO & 美國村7人親子晚餐 🎆 20:00煙火",
+    title: "Day 3 (9/5 週六)：☕ RYUKYU BEACH CLUB ➔ 🐘 萬座毛 ➔ 🦁 兒童王國 ➔ 🏴‍☠️ 海盜船公園 ➔ 🌮 美國村 🎆 20:00煙火",
+    theme: "☕ 晨間：RYUKYU BEACH CLUB海景 ➔ 🐘 萬座毛 ➔ 🦁 沖繩兒童王國(Wonder Museum) ➔ 🏴‍☠️ 安良波海盜船 ➔ 🌮 美國村 🎆 20:00煙火",
     timeline: [
-      { time: "10:00 - 12:30", title: "☕ 上午咖啡：名護鳳梨園 (Pineapple Park) 特調冷萃咖啡", desc: "【雨天超完美景點】搭乘全遮雨防雨設施的自動駕駛「鳳梨遊覽車」穿梭熱帶植物園區，室內熱帶溫室與鳳梨試飲品嚐區，享用鳳梨冷萃咖啡！", tags: [{text: "🍍 自動駕駛鳳梨車", type: "kid"}, {text: "☕ 鳳梨冷萃咖啡", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "12:30 - 13:30", title: "🍜 午餐：名護人氣名店【Satchan Soba (幸ちゃんそば)】（或 宮里麵）", desc: "名護極具盛名的在地人氣沖繩麵！濃郁醇厚的家常高湯、Q彈手工麵條與燉煮至極致軟嫩的軟骨排骨(Soki)與三層肉！亦有特製艾草麵條可選，室內舒適冷氣席。（☔ 雨天 OK）", tags: [{text: "🍜 Satchan Soba (幸ちゃんそば)", type: "food"}, {text: "🥩 軟骨排骨沖繩麵", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "14:00 - 15:00", title: "萬座毛觀景台 (Manzamo)", desc: "欣賞天然雕琢的象鼻形狀琉球石灰岩斷崖，走訪全新建成的無障礙景觀步道。（戶外景點）", tags: [{text: "🚗 車程: 約30分", type: "drive"}, {text: "🐘 象鼻岩景致", type: "kid"}] },
-      { time: "15:30 - 17:30", title: "☕ 下午咖啡：【RYUKYU BEACH CLUB (琉球海灘俱樂部)】海景第一排沙發咖啡廳", desc: "位於恩納村瀨良垣海濱！全開放式海景第一排戶外沙發席，品嚐冰拿鐵、特調飲品與巴西莓碗，看海聽浪。", tags: [{text: "☕ RYUKYU BEACH CLUB", type: "food"}, {text: "🏖️ 瀨良垣海景沙發", type: "kid"}] },
-      { time: "18:00 - 19:45", title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】＆ 🌮 美國村 7 人親子晚餐", desc: "美濱美國村 Depot Island！造訪室內重工業美式海景烘豆廠喝極品手沖/冰拿鐵，買美式復古包裝咖啡豆！\n🍴【7人親子晚餐精選推薦】：\n1. 🌮 Taco Rice Cafe Kijimuna (Depot Island 2F)：溫和歐姆蛋塔可飯，不辣滑蛋小朋友超愛，吃完直接下樓看煙火！\n2. 🍣 美濱迴轉壽司市場 (グルメ回転ずし市場)：大卡座適合7人，小朋友拿玉子燒與新鮮壽司超開心！\n3. 🍕 Chatan Harbor Brewery / Red Lobster：超寬敞室內大桌，大人喝精釀啤酒吃牛排海鮮，小朋友吃現烤披薩與義大利麵！", tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🌮 歐姆蛋塔可飯/美濱壽司", type: "food"}, {text: "👨‍👩‍👧‍👦 適合5大2小大桌席", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "19:50 - 20:10", title: "🎆【重點大推】美國村週六 20:00 海濱煙火秀 (Chatan Fireworks)", desc: "預先前往 Depot Island 沿海步道占位！20:00 準時施放約 3 分鐘璀璨浪漫的海上煙火。（如逢雨天風浪大可能彈性調整）", tags: [{text: "🎆 20:00 準時煙火", type: "kid"}, {text: "✨ Depot Island coastal boardwalk", type: "kid"}] }
+      { 
+        time: "09:00 - 10:15", 
+        title: "☕ 晨間海景咖啡：【RYUKYU BEACH CLUB (琉球海灘俱樂部)】", 
+        desc: "【距離 BEB5 僅 3 分鐘車程！】9:00 準時開門，位於恩納村瀨良垣海濱！全開放式海景第一排沙發席，品嚐香醇冰拿鐵、特調飲品與熱帶巴西莓碗，坐擁碧海藍天！\n💡【颱風外圍海風提醒】：受颱風外圍影響海邊陣風可能較大，若戶外沙發受影響可於遮雨席位享用或短暫停留拍照打卡。", 
+        tags: [{text: "☕ RYUKYU BEACH CLUB", type: "food"}, {text: "🏖️ 瀨良垣海景沙發", type: "kid"}, {text: "🚗 距BEB5僅3分鐘", type: "drive"}] 
+      },
+      { 
+        time: "10:15 - 11:15", 
+        title: "🐘 壯麗海岸地標：【萬座毛觀景台 (Manzamo)】", 
+        desc: "自 Beach Club 出發（車程僅約 5~8 分鐘）！欣賞天然雕琢的象鼻形狀琉球石灰岩斷崖與蔚藍海景，漫步全新無障礙景觀步道。\n💡【防風與觀景建議】：高台海風較強，長輩小孩建議穿防風薄外套；若遇陣風較大，可至 2 樓全新室內全景落地窗展望商場內舒適眺望與拍照（全室內無障礙＆雨天OK）。", 
+        tags: [{text: "🐘 象鼻岩絕景", type: "kid"}, {text: "🚗 車程: 約8分", type: "drive"}, {text: "🏛️ 2F室內觀景雨天OK", type: "rain-ok"}] 
+      },
+      { 
+        time: "11:15 - 12:00", 
+        title: "🚗 車程：恩納村 ➔ 沖繩市（車程約 35~40 分鐘）", 
+        desc: "全家搭乘 8人座 Alphard，自萬座毛出發，行經沖繩自動車道（屋慶名/沖繩北 IC）前往沖繩市。", 
+        tags: [{text: "🚗 車程: 約35-40分", type: "drive"}] 
+      },
+      { 
+        time: "12:00 - 13:00", 
+        title: "🍜 午餐：沖繩市人氣沖繩麵 或 園區家庭料理", 
+        desc: "前往兒童王國周邊享用美味午餐！可選擇沖繩市老字號【泡瀨そば (Awase Soba)】品嚐軟嫩三枚肉與軟骨麵，或於兒童王國園內餐廳輕鬆用餐。", 
+        tags: [{text: "🍜 沖繩市道地沖繩麵", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] 
+      },
+      { 
+        time: "13:00 - 15:30", 
+        title: "🦁 沖繩兒童王國 (Okinawa Zoo & Museum) ＆ 🏛️ Wonder Museum 互動館", 
+        desc: "【晴雨皆宜・小孩極致放電！】園內擁有琉球弧動物園（近距離觀賞大象、長頸鹿、黑紫鳥與可愛動物）。\n🌟【雨天避風雨神級設施】：園內附設【Wonder Museum】為 3 層樓全室內冷氣科學與光影互動兒童館！若下雨或陣風大，可全時間在 Wonder Museum 盡情玩球道、光影感應與觸控科技，完全不怕颱風外圍風雨！", 
+        tags: [{text: "🦁 動物園與大象", type: "kid"}, {text: "🏛️ Wonder Museum 3層室內館", type: "kid"}, {text: "☔ 雨天神級OK", type: "rain-ok"}] 
+      },
+      { 
+        time: "15:30 - 16:00", 
+        title: "🚗 車程：沖繩市 ➔ 北谷町（車程約 20 分鐘）", 
+        desc: "離開兒童王國前往北谷安良波海灘。此時小朋友可在舒適的 Alphard 座椅上小睡補眠 20~30 分鐘，迅速回血！", 
+        tags: [{text: "🚗 車程: 約20分", type: "drive"}, {text: "💤 小孩小睡補眠好時機", type: "kid"}] 
+      },
+      { 
+        time: "16:00 - 17:15", 
+        title: "🏴‍☠️ 戶外傍晚放電：【安良波公園・海盜船遊具 (Araha Beach)】", 
+        desc: "【傍晚氣溫舒適！】一比一巨大「印度洋號」木製海盜船遊樂設施、各式溜滑梯、吊橋、攀爬網與細白沙灘踩水！傍晚太陽斜曬較不悶熱，海風徐徐。\n💡【機動彈性備案】：若抵達時陣雨或海邊風大，或小朋友在車上熟睡未醒，可直接駛往美國村（車程僅 5 分鐘），大人先到海景咖啡廳休息放空。", 
+        tags: [{text: "🏴‍☠️ 印度洋號木造海盜船", type: "kid"}, {text: "🏖️ 白沙灘與滑梯放電", type: "kid"}, {text: "🎯 視風雨彈性調整", type: "kid"}] 
+      },
+      { 
+        time: "17:15 - 17:30", 
+        title: "🚗 超近車程：安良波海灘 ➔ 美濱美國村 (American Village)", 
+        desc: "自安良波公園出發駛往美國村 Depot Island，車程僅約 5 分鐘！停靠於北谷町公有免費大型停車場。", 
+        tags: [{text: "🚗 車程: 僅5分鐘", type: "drive"}] 
+      },
+      { 
+        time: "17:30 - 19:50", 
+        title: "☕ 晚間咖啡＆買豆：【ZHYVAGO COFFEE ROASTERS】＆ 🌮 美國村 7 人親子晚餐", 
+        desc: "美濱美國村 Depot Island 漫步！造訪室內重工業美式海景烘豆廠喝極品手沖/冰拿鐵，採購招牌咖啡豆！\n🍴【7人親子晚餐精選推薦】：\n1. 🌮 Taco Rice Cafe Kijimuna (Depot Island 2F)：溫和歐姆蛋塔可飯，不辣滑蛋小朋友超愛，吃完直接下樓看煙火！\n2. 🍣 美濱迴轉壽司市場 (グルメ回転ずし市場)：大卡座適合 7 人，小朋友拿玉子燒與新鮮壽司超開心！\n3. 🍕 Chatan Harbor Brewery / Red Lobster：超寬敞室內大桌，大人喝精釀啤酒吃牛排海鮮，小朋友吃現烤披薩與義大利麵！", 
+        tags: [{text: "☕ ZHYVAGO烘豆廠", type: "food"}, {text: "🌮 歐姆蛋塔可飯/美濱壽司", type: "food"}, {text: "👨‍👩‍👧‍👦 適合5大2小大桌席", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] 
+      },
+      { 
+        time: "19:50 - 20:15", 
+        title: "🎆【週六限定】美國村 20:00 海濱煙火秀 ＆ 🚗 返回 BEB5", 
+        desc: "前往 Depot Island 沿海木棧道散步占位！20:00 準時施放約 3 分鐘浪漫海上煙火！\n💡【颱風風浪備註】：煙火可能因海邊強陣風或海象不佳臨時取消，建議抱持「若施放是驚喜、若取消也享受了美國村熱鬧氛圍」的輕鬆心態！\n🚗 煙火結束後啟程北返，車程約 40 分鐘返回恩納村星野 BEB5 休息。", 
+        tags: [{text: "🎆 20:00 週六煙火", type: "kid"}, {text: "✨ Depot Island海濱步道", type: "kid"}, {text: "🚗 返程BEB5約40分", type: "drive"}] 
+      }
     ]
   },
   day4: {
