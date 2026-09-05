@@ -190,7 +190,47 @@ const itineraryData = {
     timeline: [
       { time: "09:30 - 10:15", title: "☕ 上午咖啡：BEB5 瀨良垣 晨間咖啡 ➔ 駛往沖繩市", desc: "享用 BEB5 晨間咖啡，行經國道出發前往位於沖繩市的兒童王國樂園。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約40分", type: "drive"}] },
       { time: "10:15 - 13:00", title: "沖繩兒童王國 (Okinawa Zoo & Museum)", desc: "園內附設【Wonder Museum】為 3 層樓全室內冷氣雨天無敵互動兒童科學館！若下雨可全時間在 Wonder Museum 玩樂解鎖科技互動體驗。", tags: [{text: "🦁 動物園與兒童館", type: "kid"}, {text: "🏛️ Wonder Museum室內館", type: "kid"}, {text: "☔ 雨天OK (Wonder Museum)", type: "rain-ok"}] },
-      { time: "13:30 - 14:45", title: "☕ 下午咖啡＆重頭戲：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡！", desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的【Mame Pole Pole】室內極品咖啡店！現場品嚐神級單品，採購招牌 Gajumaru 豆與沖繩在地 Ada Farm 極品咖啡豆！", tags: [{text: "🥇 Mame Pole Pole世界亞軍", type: "food"}, {text: "🛍️ 採購世界級咖啡豆", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
+      { 
+        time: "13:30 - 14:45", 
+        title: "☕ 下午咖啡＆重頭戲：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡！", 
+        desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！\n\n⭐【Breville Impress 拿鐵專用買豆必買清單】：\n1. 🥇【首推！專為牛奶調配】モーモーブレンド (Moo-Moo Blend / 牛牛配方)：中深焙，濃郁太妃糖、可可牛奶、極長甜感尾韻，做拿鐵天作之合！\n2. 🥈【招牌深焙・油脂爆發】がじゅまるブレンド (Gajumaru Blend / 榕樹配方)：深焙，雪松木與黑巧克力香，Crema 超厚實，重拿鐵愛好者必收！\n\n💡【買豆與現場提醒】：\n• 記得跟店員說買「豆 (Mame / Whole Bean)」，勿磨粉以保鮮。\n• 現場必喝：熱拿鐵 (Cafe Latte) 或 平白咖啡 (Flat White) 體驗冠軍拉花！\n• 餐點提醒：店內無熱食早餐，以咖啡外帶與少量常溫餅乾磅蛋糕為主。", 
+        extraHtml: `
+          <div class="menu-embed-box" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(30, 41, 59, 0.85);">
+            <div class="menu-embed-header">
+              <h4 style="color: #fbbf24;">☕ Breville Impress 拿鐵專用・Mame Pole Pole 推薦買豆</h4>
+              <span class="tag food">世界亞軍烘豆師・仲村良行</span>
+            </div>
+            <div class="menu-items-table">
+              <div class="menu-item-row" style="background: rgba(15, 23, 42, 0.7); border-color: rgba(245, 158, 11, 0.3);">
+                <div class="menu-item-top">
+                  <div class="menu-item-name" style="color: #fbbf24;">🥇 推薦 1：モーモーブレンド (Moo-Moo Blend / 牛牛配方)</div>
+                  <div class="menu-price-tag"><span class="tag food">中深焙</span></div>
+                </div>
+                <div class="menu-item-desc">✨ <strong>專為牛奶調配的冠軍配方！</strong> 濃郁太妃糖、可可牛奶與黑糖甜感。搭配 Breville Impress 的 54mm 把手與細緻奶泡，甜感爆棚，宛如喝黑糖巧克力牛奶！</div>
+              </div>
+
+              <div class="menu-item-row" style="background: rgba(15, 23, 42, 0.7); border-color: rgba(56, 189, 248, 0.3);">
+                <div class="menu-item-top">
+                  <div class="menu-item-name" style="color: #38bdf8;">🥈 推薦 2：がじゅまるブレンド (Gajumaru Blend / 榕樹配方)</div>
+                  <div class="menu-price-tag"><span class="tag food">深焙</span></div>
+                </div>
+                <div class="menu-item-desc">✨ <strong>店內鎮店傳奇招牌！</strong> 雪松木香氣、深焙黑巧克力、厚實油脂感（Full Body）。Crema 超級飽滿，做大杯熱拿鐵或冰拿鐵咖啡香依然濃醇扎實！</div>
+              </div>
+
+              <div style="padding: 10px 14px; background: rgba(2, 132, 199, 0.15); border-radius: 6px; font-size: 0.85rem; color: #93c5fd; line-height: 1.5; border: 1px solid rgba(56, 189, 248, 0.2);">
+                ⚙️ <strong>Breville Impress 萃取參數備忘</strong>：雙份粉碗約 18g~19g（笑臉綠燈）｜ 研磨刻度約 12~15 ｜ 萃取 36g~40g 濃縮（約 25~30 秒）｜ 蒸奶 1:4~1:5 注入！買豆請指名「<strong>豆（Mame / 不磨粉）</strong>」。
+              </div>
+            </div>
+          </div>
+        `,
+        tags: [
+          {text: "🥇 2018世界烘豆亞軍", type: "food"}, 
+          {text: "☕ 推薦1: Moo-Moo 牛牛配方", type: "food"}, 
+          {text: "☕ 推薦2: Gajumaru 榕樹配方", type: "food"}, 
+          {text: "⚙️ 附 Breville 參數", type: "food"},
+          {text: "☔ 雨天OK", type: "rain-ok"}
+        ] 
+      },
       { time: "15:00 - 17:30", title: "AEON MALL 永旺夢樂城來客夢 ＆ 超市和牛大採購", desc: "全沖繩最大型室內購物中心！逛阿卡將本鋪母嬰用品、玩具反斗城。前往 1F 【AEON Style 超市】採購今晚火鍋食材：沖繩 A5 黑毛和牛/石垣牛火鍋肉片、阿古豬、高湯包與水果！", tags: [{text: "🛒 AEON超市採購和牛", type: "food"}, {text: "🥩 沖繩A5黑毛和牛", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "17:30 - 18:30", title: "載著滿滿食材駛回星野 BEB5 瀨良垣", desc: "將新鮮和牛、阿古豬與蔬菜裝入保冷袋載回飯店。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
       { time: "18:30 - 21:00", title: "🍲 晚餐：BEB5 飯店套房廚房【DIY 頂級和牛＆阿古豬火鍋大餐】", desc: "100% 室內舒適空間！充分利用 BEB5 房間內完整的廚房設施與大冰箱，用 IH 電磁爐煮高湯，全家 5大2小 溫馨圍爐享用 A5 和牛與阿古豬火鍋，完全不怕屋外風雨！", tags: [{text: "🍲 BEB5 溫馨和牛火鍋", type: "food"}, {text: "🥂 溫馨家庭時光", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
@@ -240,7 +280,7 @@ const gourmetData = [
   { name: "古宇利海灘 (Kouri Beach - Day 2 超順路踩水)", category: "cafe", location: "古宇利大橋下", desc: "🏖️ 浪平水淺、細白沙灘、洗腳與沖洗設施齊全！位在蝦蝦飯樓下，2位小朋友踩水玩沙首選。" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！【☔ 雨天OK】" },
-  { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！必買 Gajumaru 豆與安田農園沖繩豆。【☔ 雨天OK】" },
+  { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍！【Breville Impress 拿鐵必買】：1. Moo-Moo 牛牛配方（專為牛奶調配）、2. Gajumaru 榕樹配方（招牌深焙Crema爆發）！記得指名買原豆勿磨粉。【☔ 雨天OK】" },
   { name: "ZHYVAGO COFFEE ROASTERS", category: "cafe", location: "美濱美國村", desc: "☕ 美國村海景第一排重工業風美式烘豆廠，質感手沖與超酷復古包裝咖啡豆。【☔ 雨天OK】" },
   { name: "Craft House yacchi&moon (壺屋陶器街)", category: "naha", location: "那霸/壺屋", desc: "超人氣手作陶器餐具專賣店！經典盤子、馬克杯、熊熊器皿與文青擺飾。【☔ 雨天OK】" },
   { name: "AEON Style 超市 沖繩A5黑毛和牛", category: "yakiniku", location: "AEON Rycom", desc: "販售頂級沖繩A5黑毛和牛、石垣牛與阿古豬火鍋肉片，搭配日式火鍋高湯包於 BEB5 自煮。【☔ 雨天OK】" },
