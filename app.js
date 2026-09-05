@@ -185,14 +185,18 @@ const itineraryData = {
     ]
   },
   day4: {
-    title: "Day 4 (9/6 週日)：兒童王國 ➔ ☕ 豆ポレポレ (Mame Pole Pole世界亞軍咖啡) ➔ AEON ➔ 🍲 BEB5和牛火鍋",
-    theme: "🥇 ☕ 重頭戲：造訪 Mame Pole Pole (世界烘豆亞軍) 買極品咖啡豆 ＆ 🍲 BEB5 自煮和牛火鍋",
+    title: "Day 4 (9/6 週日)：☕ 豆ポレポレ (世界亞軍) ➔ 🛍️ AEON來客夢 ➔ 🏖️ 納碧海灘 ➔ 🍲 BEB5和牛火鍋",
+    theme: "☕ 09:00 出發 ➔ 第一站：世界亞軍咖啡買豆 ➔ 第二站：AEON午餐逛街採購 ➔ 第三站：飯店旁海灘踩水 ➔ 第四站：BEB5自煮和牛火鍋",
     timeline: [
-      { time: "09:30 - 10:15", title: "☕ 上午咖啡：BEB5 瀨良垣 晨間咖啡 ➔ 駛往沖繩市", desc: "享用 BEB5 晨間咖啡，行經國道出發前往位於沖繩市的兒童王國樂園。", tags: [{text: "☕ BEB5晨間咖啡", type: "food"}, {text: "🚗 車程: 約40分", type: "drive"}] },
-      { time: "10:15 - 13:00", title: "沖繩兒童王國 (Okinawa Zoo & Museum)", desc: "園內附設【Wonder Museum】為 3 層樓全室內冷氣雨天無敵互動兒童科學館！若下雨可全時間在 Wonder Museum 玩樂解鎖科技互動體驗。", tags: [{text: "🦁 動物園與兒童館", type: "kid"}, {text: "🏛️ Wonder Museum室內館", type: "kid"}, {text: "☔ 雨天OK (Wonder Museum)", type: "rain-ok"}] },
       { 
-        time: "13:30 - 14:45", 
-        title: "☕ 下午咖啡＆重頭戲：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡！", 
+        time: "09:00 - 09:50", 
+        title: "🚗 BEB5 準時出發 ➔ 駛往沖繩市（車程約 40~45 分鐘）", 
+        desc: "全家搭乘 8人座 Alphard，自星野 BEB5 瀨良垣出發，行經沖繩自動車道（屋嘉 IC ➔ 沖繩北 IC）前往沖繩市。", 
+        tags: [{text: "🚗 車程: 約40-45分", type: "drive"}] 
+      },
+      { 
+        time: "09:50 - 11:00", 
+        title: "☕ 第一站：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡＆買豆！", 
         desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！\n\n⭐【Breville Impress 拿鐵專用買豆必買清單】：\n1. 🥇【首推！專為牛奶調配】モーモーブレンド (Moo-Moo Blend / 牛牛配方)：中深焙，濃郁太妃糖、可可牛奶、極長甜感尾韻，做拿鐵天作之合！\n2. 🥈【招牌深焙・油脂爆發】がじゅまるブレンド (Gajumaru Blend / 榕樹配方)：深焙，雪松木與黑巧克力香，Crema 超厚實，重拿鐵愛好者必收！\n\n💡【買豆與現場提醒】：\n• 記得跟店員說買「豆 (Mame / Whole Bean)」，勿磨粉以保鮮。\n• 現場必喝：熱拿鐵 (Cafe Latte) 或 平白咖啡 (Flat White) 體驗冠軍拉花！\n• 餐點提醒：店內無熱食早餐，以咖啡外帶與少量常溫餅乾磅蛋糕為主。", 
         extraHtml: `
           <div class="menu-embed-box" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(30, 41, 59, 0.85);">
@@ -231,9 +235,46 @@ const itineraryData = {
           {text: "☔ 雨天OK", type: "rain-ok"}
         ] 
       },
-      { time: "15:00 - 17:30", title: "AEON MALL 永旺夢樂城來客夢 ＆ 超市和牛大採購", desc: "全沖繩最大型室內購物中心！逛阿卡將本鋪母嬰用品、玩具反斗城。前往 1F 【AEON Style 超市】採購今晚火鍋食材：沖繩 A5 黑毛和牛/石垣牛火鍋肉片、阿古豬、高湯包與水果！", tags: [{text: "🛒 AEON超市採購和牛", type: "food"}, {text: "🥩 沖繩A5黑毛和牛", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "17:30 - 18:30", title: "載著滿滿食材駛回星野 BEB5 瀨良垣", desc: "將新鮮和牛、阿古豬與蔬菜裝入保冷袋載回飯店。（車程約 40 分鐘）", tags: [{text: "🚗 車程: 約40分", type: "drive"}] },
-      { time: "18:30 - 21:00", title: "🍲 晚餐：BEB5 飯店套房廚房【DIY 頂級和牛＆阿古豬火鍋大餐】", desc: "100% 室內舒適空間！充分利用 BEB5 房間內完整的廚房設施與大冰箱，用 IH 電磁爐煮高湯，全家 5大2小 溫馨圍爐享用 A5 和牛與阿古豬火鍋，完全不怕屋外風雨！", tags: [{text: "🍲 BEB5 溫馨和牛火鍋", type: "food"}, {text: "🥂 溫馨家庭時光", type: "kid"}, {text: "☔ 雨天OK", type: "rain-ok"}] }
+      { 
+        time: "11:00 - 15:00", 
+        title: "🛍️ 第二站：【AEON MALL 永旺夢樂城來客夢】午餐＋吹冷氣逛街＋超市採買和牛火鍋！", 
+        desc: "自 Mame Pole Pole 出發車程僅約 10 分鐘！全沖繩最大室內購物中心！\n\n🍴【11:15 - 12:30 輕鬆午餐】：3F/4F 美食街或主題餐廳街，豐富日式拉麵、牛排、海鮮丼與兒童餐應有盡有！\n🛍️【12:30 - 14:15 吹冷氣逛街】：看一樓巨型大水族箱看熱帶魚、逛寶可夢中心、阿卡將本鋪母嬰、玩具反斗城、BicCamera 吹冷氣放鬆！\n🥩【14:15 - 15:00 超市火鍋大採購】：前往 2F 【AEON Style 超市】大採購今晚火鍋食材：\n• 沖繩產 A5 黑毛和牛 / 石垣牛火鍋肉片\n• 阿古豬（Agu）頂級火鍋肉片\n• 日式高湯包、烏龍麵、鮮甜白菜菇類、生魚片握壽司拼盤\n• 沖繩鮮切水果與特色飲品（超市提供免費碎冰，放入保冷袋）！", 
+        tags: [
+          {text: "🏬 沖繩最大室內Mall", type: "kid"}, 
+          {text: "🍜 豐盛午餐", type: "food"}, 
+          {text: "🛒 AEON超市大採購", type: "food"}, 
+          {text: "🥩 A5黑毛和牛＆阿古豬", type: "food"}, 
+          {text: "☔ 雨天OK", type: "rain-ok"}
+        ] 
+      },
+      { 
+        time: "15:00 - 15:45", 
+        title: "🚗 車程：AEON 來客夢 ➔ 恩納村 BEB5 瀨良垣（車程約 40 分鐘）", 
+        desc: "全家乘車北返恩納村。可先順路將買好的和牛食材冰入 BEB5 客房大冰箱，換上海灘拖鞋與毛巾（海灘距飯店僅 5 分鐘！），小朋友也可在車上小憩片刻。", 
+        tags: [{text: "🚗 車程: 約40分", type: "drive"}, {text: "🧊 食材先冰回飯店冰箱", type: "food"}] 
+      },
+      { 
+        time: "15:45 - 17:15", 
+        title: "🏖️ 第三站：飯店旁海灘【恩納村海濱公園・納碧海灘 (Nabee Beach)】踩水玩沙！", 
+        desc: "【距離 BEB5 僅 5 分鐘車程！】（Mapcode: 206 312 098*88｜電話: 098-966-8839）\n🌟【跟安良波、古宇利一樣適合小孩的親子神級海灘！】：\n• 🅿️ 免費停車、免費入場！\n• 🌊 凹型天然海灣＋防波堤保護，風浪平緩如湖面、水淺澈透，設有安全防護網，2位小朋友踩水踏浪超安心！\n• 🏖️ 純白細緻沙灘，堆沙堡、抓小寄居蟹極度舒適！\n• 🛖 紅瓦遮陽涼亭：大人與長輩可舒服坐在陰涼處看海吹風。\n• 🚿 免費洗腳水龍頭、投幣更衣淋浴間一應俱全，玩完沖洗乾淨 5 分鐘輕鬆開回飯店！", 
+        tags: [
+          {text: "🏖️ 納碧海灘(距BEB5僅5分)", type: "kid"}, 
+          {text: "🅿️ 免費停車與入場", type: "drive"}, 
+          {text: "🌊 浪平水淺/細白沙灘", type: "kid"}, 
+          {text: "🛖 紅瓦涼亭舒適看海", type: "kid"}
+        ] 
+      },
+      { 
+        time: "17:30 - 21:00", 
+        title: "🍲 第四站：星野 BEB5 客房廚房【DIY 頂級 A5 和牛＆阿古豬火鍋圍爐大餐】", 
+        desc: "自海灘回飯店後，全家洗個舒服的熱水澡，換上最放鬆的居家服！\n100% 室內私密溫馨時光！充分利用套房內完整的大廚房、流理台、大冰箱與 IH 爐，熱騰騰煮好日式高湯，5大2小 圍著餐桌享用下午在 AEON 採購的 A5 黑毛和牛、阿古豬與生魚片壽司！\n隨心所欲、溫馨愜意，享受無拘無束的高品質家庭圍爐之夜！", 
+        tags: [
+          {text: "🍲 BEB5 溫馨和牛火鍋", type: "food"}, 
+          {text: "🥩 頂級A5和牛＆阿古豬", type: "food"}, 
+          {text: "👨‍👩‍👧‍👦 5大2小家庭圍爐", type: "kid"}, 
+          {text: "☔ 雨天OK", type: "rain-ok"}
+        ] 
+      }
     ]
   },
   day5: {
@@ -278,6 +319,7 @@ const gourmetData = [
   { name: "古宇利大橋南詰展望所 (Day 2 拍照勝地)", category: "cafe", location: "屋我地島 (本島側橋頭)", desc: "📸 拍攝古宇利大橋延伸入果凍海絕景的頂級拍照展望點！免費停車場，有沙灘步道。" },
   { name: "Kouri Shrimp 蝦蝦飯 ＆ Benny's Bowl 巴西莓碗 (Day 2)", category: "cafe", location: "古宇利島", desc: "🍤 🥣 同棟大樓！2 樓為蒜味奶油夏威夷蝦蝦飯，1 樓為 sister shop【Benny's】鮮果巴西莓碗 (Acai Bowl)，二樓海景陽台一同享用。" },
   { name: "古宇利海灘 (Kouri Beach - Day 2 超順路踩水)", category: "cafe", location: "古宇利大橋下", desc: "🏖️ 浪平水淺、細白沙灘、洗腳與沖洗設施齊全！位在蝦蝦飯樓下，2位小朋友踩水玩沙首選。" },
+  { name: "恩納村海濱公園・納碧海灘 (Nabee Beach - Day 4 飯店旁海灘)", category: "cafe", location: "恩納村 (距BEB5僅5分)", desc: "🏖️ 距離 BEB5 僅 5 分鐘！免費停車、免費入場！天然內灣防波堤、浪平水淺、細白沙灘、免費洗腳水龍頭、紅瓦涼亭，帶幼童踩水玩沙極度安心首選。" },
   { name: "RYUKYU BEACH CLUB (琉球海灘俱樂部)", category: "cafe", location: "恩納村瀨良垣", desc: "☕ 瀨良垣海景第一排全開放式沙發座位，品嚐冰拿鐵、特調飲品與巴西莓碗，觀賞絕美夕陽風光。" },
   { name: "琉球之牛 (北谷店) - 已訂位 17:00", category: "yakiniku", location: "北谷町美濱", desc: "🥩 【預約號 #MR3Q6W】沖繩必吃 A5 沖繩縣產黑毛和牛燒肉與鎮店炙燒和牛壽司！【☔ 雨天OK】" },
   { name: "Mame Pole Pole (豆ポレポレ)", category: "cafe", location: "沖繩市", desc: "🥇 2018 世界咖啡烘焙大賽亞軍！【Breville Impress 拿鐵必買】：1. Moo-Moo 牛牛配方（專為牛奶調配）、2. Gajumaru 榕樹配方（招牌深焙Crema爆發）！記得指名買原豆勿磨粉。【☔ 雨天OK】" },
