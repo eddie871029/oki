@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BALMUDA The Range 功能對照貼紙 (日翻中對照表)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #121212;
+      color: #ffffff;
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .instructions {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 480px;
+      line-height: 1.5;
+    }
+
+    /* Sticker Container (Designed like BALMUDA matte black luxury aesthetic) */
+    .sticker-card {
+      width: 380px;
+      background: #1c1c1e;
+      border: 2px solid #3a3a3c;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .sticker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #3a3a3c;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #f59e0b;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: #a1a1aa;
+      font-weight: 500;
+    }
+
+    /* Grid of modes */
+    .modes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mode-row {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      align-items: center;
+      background: #27272a;
+      border: 1px solid #3f3f46;
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+
+    .mode-jp-tag {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mode-symbol {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .mode-jp-name {
+      font-size: 0.7rem;
+      color: #a1a1aa;
+    }
+
+    .mode-cn-detail {
+      border-left: 1px solid #3f3f46;
+      padding-left: 12px;
+    }
+
+    .mode-cn-main {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fcd34d;
+      margin-bottom: 2px;
+    }
+
+    .mode-sub-options {
+      font-size: 0.75rem;
+      color: #d4d4d8;
+      line-height: 1.35;
+    }
+
+    .highlight-pill {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fcd34d;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      margin-right: 3px;
+    }
+
+    .sticker-footer {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #3a3a3c;
+      font-size: 0.75rem;
+      color: #71717a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-print {
+      margin-top: 20px;
+      background: #f59e0b;
+      color: #000000;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-print:hover {
+      background: #d97706;
+      transform: scale(1.03);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+        padding: 0;
+      }
+      .instructions, .btn-print {
+        display: none;
+      }
+      .sticker-card {
+        border: 2px solid #000000;
+        background: #ffffff;
+        color: #000000;
+        box-shadow: none;
+      }
+      .brand-title { color: #000000; }
+      .brand-sub { color: #555555; }
+      .mode-row {
+        background: #f4f4f5;
+        border-color: #d4d4d8;
+      }
+      .mode-symbol { color: #000000; }
+      .mode-jp-name { color: #666666; }
+      .mode-cn-main { color: #000000; }
+      .mode-sub-options { color: #333333; }
+      .mode-cn-detail { border-left-color: #cccccc; }
+      .highlight-pill { background: #e4e4e7; color: #000000; border: 1px solid #aaaaaa; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="instructions">
+    💡 <strong>BALMUDA The Range 操作面板速查貼紙</strong><br>
+    手機可直接長按截圖儲存，或點擊下方按鈕直接列印（黑白/彩色皆適合）貼在微波爐側邊！
+  </div>
+
+  <!-- STICKER CARD -->
+  <div class="sticker-card" id="stickerArea">
+    <div class="sticker-header">
+      <div>
+        <div class="brand-title">BALMUDA</div>
+        <div class="brand-sub">The Range 功能模式日翻中對照</div>
+      </div>
+      <div style="font-size: 1.4rem;">🎸 ⚡</div>
+    </div>
+
+    <div class="modes-list">
+      <!-- AUTO -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">AUTO</span>
+          <span class="mode-jp-name">自動あたため</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">✨ 自動加熱</div>
+          <div class="mode-sub-options">常溫/冷藏飯菜、便當一鍵全自動加熱</div>
+        </div>
+      </div>
+
+      <!-- MANUAL (M) -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">M</span>
+          <span class="mode-jp-name">手動レンジ</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">⚡ 手動微波 (自選瓦數)</div>
+          <div class="mode-sub-options">
+            <span class="highlight-pill">800W</span>極速熱 
+            <span class="highlight-pill">600W/500W</span>標準熱 
+            <span class="highlight-pill">100W</span>微軟化
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINK -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">☕ 飲み物</span>
+          <span class="mode-jp-name">飲品加熱</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">☕ 飲品/牛奶溫熱</div>
+          <div class="mode-sub-options">
+            旋鈕轉杯數：<strong>1.ミルク</strong> (牛奶) ｜ <strong>2.コーヒー</strong> (咖啡) ｜ <strong>3.アツカン</strong> (熱清酒)
+          </div>
+        </div>
+      </div>
+
+      <!-- FROZEN RICE -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">🍚 冷凍</span>
+          <span class="mode-jp-name">冷凍ごはん</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">🍚 冷凍白飯加熱</div>
+          <div class="mode-sub-options">
+            旋鈕選份量：<strong>1杯</strong> (150g/1碗) ｜ <strong>2杯</strong> (300g/2碗)
+          </div>
+        </div>
+      </div>
+
+      <!-- DEFROST -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">❄️ 解凍</span>
+          <span class="mode-jp-name">かいとう</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">❄️ 食材退冰解凍</div>
+          <div class="mode-sub-options">
+            <strong>1.解凍</strong> (完全解凍) ｜ <strong>2.半解凍</strong> (好切片)
+            <br><span style="color:#a1a1aa;">※ 轉右旋鈕依重量 50g 增減</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- OVEN -->
+      <div class="mode-row">
+        <div class="mode-jp-tag">
+          <span class="mode-symbol">OVEN</span>
+          <span class="mode-jp-name">オーブン</span>
+        </div>
+        <div class="mode-cn-detail">
+          <div class="mode-cn-main">🔥 烤箱 ＆ 麵團發酵</div>
+          <div class="mode-sub-options">
+            <strong>予熱あり</strong> (含預熱) ｜ <strong>予熱なし</strong> (不預熱)
+            <br>溫控 100°C~250°C ｜ <strong>発酵</strong> (發酵 40°C)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticker-footer">
+      <span>左旋鈕: 選模式 ｜ 右旋鈕: 調時間/溫度 ｜ 按中間: 啟動</span>
+      <span>ENJOY! 🎵</span>
+    </div>
+  </div>
+
+  <button class="btn-print" onclick="window.print()">🖨️ 列印此貼紙 (Print Sticker)</button>
+
+</body>
+</html>
