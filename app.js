@@ -197,11 +197,11 @@ const itineraryData = {
       { 
         time: "09:50 - 11:00", 
         title: "☕ 第一站：【Mame Pole Pole (豆ポレポレ)】世界烘豆亞軍咖啡＆買豆！", 
-        desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！\n\n⭐【Breville Impress 拿鐵專用買豆必買清單】：\n1. 🥇【首推！專為牛奶調配】モーモーブレンド (Moo-Moo Blend / 牛牛配方)：中深焙，濃郁太妃糖、可可牛奶、極長甜感尾韻，做拿鐵天作之合！\n2. 🥈【招牌深焙・油脂爆發】がじゅまるブレンド (Gajumaru Blend / 榕樹配方)：深焙，雪松木與黑巧克力香，Crema 超厚實，重拿鐵愛好者必收！\n\n💡【買豆與現場提醒】：\n• 記得跟店員說買「豆 (Mame / Whole Bean)」，勿磨粉以保鮮。\n• 現場必喝：熱拿鐵 (Cafe Latte) 或 平白咖啡 (Flat White) 體驗冠軍拉花！\n• 餐點提醒：店內無熱食早餐，以咖啡外帶與少量常溫餅乾磅蛋糕為主。", 
+        desc: "【指定神級景點】造訪 2018 世界咖啡烘焙大賽亞軍、兩屆日本冠軍仲村良行先生的極品咖啡店！\n\n⭐【Breville Impress 義式/拿鐵專用買豆必買清單】：\n1. 🥇【深焙首推！專為牛奶調配】モーモーブレンド (Moo-Moo Blend / 牛牛配方)：中深焙，濃郁太妃糖、可可牛奶、極長甜感尾韻，做拿鐵天作之合！\n2. 🥈【招牌深焙・油脂爆發】がじゅまるブレンド (Gajumaru Blend / 榕樹配方)：深焙，雪松木與黑巧克力香，Crema 超厚實，重拿鐵愛好者必收！\n3. 🥉【中焙首推・現代花果甜感】ポレポレブレンド (Pole Pole Blend / 經典配方)：中焙（中煎り），花香、柑橘、草莓牛奶巧克力風味！做拿鐵輕盈清甜、做美式果香奔放！\n\n💡【買豆與現場提醒】：\n• 記得跟店員說買「豆 (Mame / Whole Bean)」，勿磨粉以保鮮。\n• 現場必喝：熱拿鐵 (Cafe Latte) 或 平白咖啡 (Flat White) 體驗冠軍拉花！\n• 餐點提醒：店內無熱食早餐，以咖啡外帶與少量常溫餅乾磅蛋糕為主。", 
         extraHtml: `
           <div class="menu-embed-box" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(30, 41, 59, 0.85);">
             <div class="menu-embed-header">
-              <h4 style="color: #fbbf24;">☕ Breville Impress 拿鐵專用・Mame Pole Pole 推薦買豆</h4>
+              <h4 style="color: #fbbf24;">☕ Breville Impress 義式/拿鐵專用・Mame Pole Pole 推薦買豆</h4>
               <span class="tag food">世界亞軍烘豆師・仲村良行</span>
             </div>
             <div class="menu-items-table">
@@ -221,8 +221,19 @@ const itineraryData = {
                 <div class="menu-item-desc">✨ <strong>店內鎮店傳奇招牌！</strong> 雪松木香氣、深焙黑巧克力、厚實油脂感（Full Body）。Crema 超級飽滿，做大杯熱拿鐵或冰拿鐵咖啡香依然濃醇扎實！</div>
               </div>
 
+              <div class="menu-item-row" style="background: rgba(15, 23, 42, 0.7); border-color: rgba(52, 211, 153, 0.3);">
+                <div class="menu-item-top">
+                  <div class="menu-item-name" style="color: #34d399;">🥉 推薦 3：ポレポレブレンド (Pole Pole Blend / 經典配方)</div>
+                  <div class="menu-price-tag"><span class="tag food" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3);">中焙 (中煎り)</span></div>
+                </div>
+                <div class="menu-item-desc">✨ <strong>創店靈魂・花果香代表！</strong> 柑橘清甜、花香、牛奶巧克力與柔和紅莓酸甜。做拿鐵如「草莓太妃糖牛奶」輕盈甘甜，做美式果香回甘！</div>
+              </div>
+
               <div style="padding: 10px 14px; background: rgba(2, 132, 199, 0.15); border-radius: 6px; font-size: 0.85rem; color: #93c5fd; line-height: 1.5; border: 1px solid rgba(56, 189, 248, 0.2);">
-                ⚙️ <strong>Breville Impress 萃取參數備忘</strong>：雙份粉碗約 18g~19g（笑臉綠燈）｜ 研磨刻度約 12~15 ｜ 萃取 36g~40g 濃縮（約 25~30 秒）｜ 蒸奶 1:4~1:5 注入！買豆請指名「<strong>豆（Mame / 不磨粉）</strong>」。
+                ⚙️ <strong>Breville Impress 萃取參數備忘（雙份粉碗約 18g 笑臉綠燈）</strong>：<br>
+                • <strong>深焙/中深焙 (Moo-Moo / 榕樹)</strong>：研磨刻度 12~15 ｜ 萃取 36g~40g 濃縮（約 25~30s）<br>
+                • <strong>中焙 (Pole Pole Blend)</strong>：研磨刻度調細至 <strong>8~11</strong> ｜ 萃取拉長至 <strong>40g~45g</strong>（約 28~32s，帶出深層甜感防酸澀）！<br>
+                💡 買豆請指名「<strong>豆（Mame / 不磨粉）</strong>」。
               </div>
             </div>
           </div>
@@ -231,7 +242,8 @@ const itineraryData = {
           {text: "🥇 2018世界烘豆亞軍", type: "food"}, 
           {text: "☕ 推薦1: Moo-Moo 牛牛配方", type: "food"}, 
           {text: "☕ 推薦2: Gajumaru 榕樹配方", type: "food"}, 
-          {text: "⚙️ 附 Breville 參數", type: "food"},
+          {text: "☕ 推薦3: Pole Pole 中焙配方", type: "food"}, 
+          {text: "⚙️ 附 Breville 深/中焙參數", type: "food"},
           {text: "☔ 雨天OK", type: "rain-ok"}
         ] 
       },
