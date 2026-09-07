@@ -307,7 +307,7 @@ const itineraryData = {
     theme: "☕ 晨間咖啡：那霸機場 35 COFFEE (珊瑚咖啡) ＆ ✈️ 11:50 華航 CI 121 返台",
     timeline: [
       { time: "07:30 - 08:15", title: "☕ 上午咖啡：THE NEST NAHA 頂樓池畔晨間咖啡 & 退房", desc: "享用飯店早餐或頂樓池畔晨間咖啡，整理行李準備退房。", tags: [{text: "☕ 池畔晨間咖啡", type: "food"}, {text: "🏨 退房出發", type: "drive"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
-      { time: "08:15 - 08:45", title: "加油站加滿油 & 歸還 8人座 Alphard", desc: "駕駛至那霸機場附近的租車營業所，將油箱加滿並辦理還車手續。", tags: [{text: "⛽ 加滿油還車", type: "drive"}] },
+      { time: "08:15 - 08:45", title: "加油站加滿油 & 歸還 8人座 Alphard", desc: "前往【ENEOS 沖縄港油給油所】（專人服務/距飯店僅300m）加滿油並領取「満タン收據」，隨後辦理還車。<br><a href='gas_guide.html' style='color:#0284c7;font-weight:bold;text-decoration:underline;'>⛽ 點此查看：2025 Alphard 還車加油實戰圖解指南</a>", tags: [{text: "⛽ 加滿油還車", type: "drive"}] },
       { time: "08:45 - 09:15", title: "搭乘租車接駁車至那霸機場國際線航廈", desc: "抵達機場航廈，時間非常充裕，無縫銜接登機手續。", tags: [{text: "🚌 機場接駁", type: "drive"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "09:15 - 11:50", title: "☕ 離境咖啡＆買豆：那霸機場【35 COFFEE】(珊瑚烘焙咖啡)", desc: "2大2小辦理華航 CI 121 報到托運。品嚐現做【豬肉蛋飯糰】，於【35 COFFEE】喝珊瑚烘焙咖啡並採購特產咖啡豆！", tags: [{text: "☕ 35 COFFEE珊瑚咖啡", type: "food"}, {text: "🛍️ 買珊瑚咖啡豆", type: "food"}, {text: "☔ 雨天OK", type: "rain-ok"}] },
       { time: "11:50 - 12:35", title: "搭乘華航 CI 121 班機返抵台灣 (OKA ➔ TPE)", desc: "11:50 那霸機場起飛，台灣時間 12:35 順利抵達桃園機場第一航廈，結束快樂充實的沖繩 6 天 5 夜之旅！", tags: [{text: "✈️ 華航 CI 121 返台", type: "drive"}] }

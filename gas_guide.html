@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 Alphard 還車加油指南 ｜ ENEOS 沖縄港油給油所</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    .back-link {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .header-card {
+      background: linear-gradient(135deg, #1e293b, #334155);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #475569;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .badge {
+      display: inline-block;
+      background: #ef4444;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .badge.full-service {
+      background: #f59e0b;
+      margin-left: 6px;
+    }
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .sub {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* Infographic Photo Frame */
+    .photo-card {
+      background: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      border: 1px solid #334155;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .photo-caption {
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      background: #1e293b;
+      border-top: 1px solid #334155;
+    }
+
+    /* Giant Dialogue Cards for Gas Attendant */
+    .speech-box {
+      background: #fef08a;
+      color: #854d0e;
+      border: 2px solid #eab308;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(234, 179, 8, 0.2);
+    }
+    .speech-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .japanese-main {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .romaji {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+    .chinese-mean {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #b45309;
+    }
+
+    /* Steps Section */
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .step-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 900;
+      font-size: 1.1rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f1f5f9;
+    }
+    .step-content p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .highlight-red {
+      color: #f87171;
+      font-weight: 700;
+    }
+    .highlight-blue {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    /* Gas Station Info */
+    .station-info {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #334155;
+      font-size: 0.9rem;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    .info-label {
+      color: #94a3b8;
+    }
+    .info-val {
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .btn-maps {
+      display: block;
+      width: 100%;
+      background: #0284c7;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-top: 14px;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-nav">
+    <a href="index.html" class="back-link">❮ 返回沖繩行程表</a>
+    <span>2025 40系 Alphard</span>
+  </div>
+
+  <div class="header-card">
+    <span class="badge">⛽ 還車加油指南</span>
+    <span class="badge full-service">專人加油（免動手）</span>
+    <h1>2025 Alphard 還車加滿油實戰</h1>
+    <p class="sub">ENEOS 沖縄港油給油所 / (有)沖縄港油（離飯店 300 公尺）</p>
+  </div>
+
+  <!-- Real Photo Infographic Graphic -->
+  <div class="photo-card">
+    <img src="alphard_gas_guide.jpg" alt="2025 Alphard 加油指引圖解">
+    <div class="photo-caption">
+      📸 <strong>加油四大關鍵實景圖解：</strong><br>
+      ① 專人服務車道停靠 ｜ ② 駕駛座右下油箱蓋按鈕 ｜ ③ 認明紅色 Regular 槍 ｜ ④ 務必領取「満タン」收據
+    </div>
+  </div>
+
+  <!-- Giant Japanese Speech Card for Attendant -->
+  <div class="speech-box">
+    <div class="speech-title">📱 到加油站請直接出示手機螢幕給店員看</div>
+    <div class="japanese-main">レギュラー、満タンで！<br>クレジットカードで。</div>
+    <div class="romaji">Regular, Man-tan de! Credit card de.</div>
+    <div class="chinese-mean">（麻煩加「一般無鉛汽油」、加到全滿、刷信用卡）</div>
+    <hr style="border: none; border-top: 1px dashed #ca8a04; margin: 12px 0;">
+    <div style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">
+      レシートをください。
+    </div>
+    <div class="romaji" style="margin-bottom: 2px;">Receipt o kudasai.</div>
+    <div class="chinese-mean">（請給我加油收據，還車檢查必備！）</div>
+  </div>
+
+  <!-- Step-by-Step Instructions -->
+  <div class="section-title">🛠️ 40系 Alphard 加油 4 大步驟</div>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h3>油箱在「車身左後方」</h3>
+      <p>Alphard 的油箱蓋位於<span class="highlight-blue">副駕駛那一側（左後方）</span>。開進加油站時，請將車輛<strong>左側靠向加油機</strong>停妥並熄火。</p>
+    </div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h3>按下油箱蓋開關 ⛽</h3>
+      <p>開關位於駕駛席<span class="highlight-blue">方向盤右下方 / 右膝前方開關面板</span>（標示為加油機 ⛽ 圖案）。輕按一下聽到「喀」一聲，左後方油箱門即解鎖彈開。</p>
+    </div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h3>這是專人加油站（不用自己加！）</h3>
+      <p>此站為 <span class="highlight-red">フルサービス（Full Service）</span>，員工會熱情引導、主動開蓋加油與清潔車窗。直接將上面黃色字卡給店員看即可。</p>
+    </div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h3>收好「満タン收據（領収書）」⚠️</h3>
+      <p>加滿油結帳後，店員一定會給一張收據。上面會印有<span class="highlight-red">「レギュラー」與「満タン」</span>字樣。<strong>租車公司還車驗車時必查</strong>，請隨手放在儀表板上方備查！</p>
+    </div>
+  </div>
+
+  <!-- Gas Station Information -->
+  <div class="section-title">📍 預計前往加油站資訊</div>
+
+  <div class="station-info">
+    <div class="info-row">
+      <span class="info-label">站名</span>
+      <span class="info-val">ENEOS 沖縄港油給油所 / (有)沖縄港油</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">地址</span>
+      <span class="info-val">沖縄県那覇市西2-11-1</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">電話</span>
+      <span class="info-val">098-862-2686</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">服務形態</span>
+      <span class="info-val" style="color: #4ade80;">專人加油（フルサービス）</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">營業時間</span>
+      <span class="info-val">07:00 - 19:00（週二有營業）</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">與飯店距離</span>
+      <span class="info-val">距 THE NEST NAHA 僅 300 公尺（開車 1 分鐘）</span>
+    </div>
+
+    <a href="https://maps.google.com/?q=ENEOS+沖縄港油給油所" target="_blank" class="btn-maps">
+      🗺️ 打開 Google Maps 導航前往
+    </a>
+  </div>
+
+</body>
+</html>
